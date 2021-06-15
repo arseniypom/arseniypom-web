@@ -4,11 +4,28 @@ import { Navbar } from "./components/Navbar";
 function App() {
   return <>
     <Navbar />
-    <div className="container">
-      <h1>Hi,</h1>
-      <h1>I'm Arseniy,</h1>
-      <h1>web developer</h1>
-    </div>
+    <main className="container">
+      <div className="intro">
+        <div className="intro_header">
+          <h1>
+            <span>H</span>
+            <span>i</span>
+            <span>,</span>
+            <br />
+            <span>I</span>
+            <span>'</span>
+            <span>m</span>
+            <span>A</span>
+            <span>r</span>
+            <span>s</span>
+            <span>e</span>
+            <span>n</span>
+            <span>i</span>
+            <span>y</span>
+          </h1>
+        </div>
+      </div>
+    </main>
   </>;
 }
 
