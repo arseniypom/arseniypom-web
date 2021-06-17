@@ -1,30 +1,13 @@
 import React from 'react';
-import { Navbar } from "./components/Navbar";
+import { Navbar, Intro, Portfolio, Footer } from "./components";
 
 function App() {
   return <>
     <Navbar />
     <main className="container">
-      <div className="intro">
-        <div className="intro_header">
-          <h1>
-            <span>H</span>
-            <span>i</span>
-            <span>,</span>
-            <br />
-            <span>I</span>
-            <span>'</span>
-            <span>m</span>
-            <span>A</span>
-            <span>r</span>
-            <span>s</span>
-            <span>e</span>
-            <span>n</span>
-            <span>i</span>
-            <span>y</span>
-          </h1>
-        </div>
-      </div>
+      <Intro />
+      <Portfolio />
+      <Footer />
     </main>
   </>;
 }

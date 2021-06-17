@@ -3,6 +3,12 @@
 @import 'variables';
 @import 'main-menu';
 @import 'intro';
+@import 'portfolio';
+@import 'footer';
+
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   margin: 0;
@@ -15,9 +21,9 @@ code {
 }
 
 body {
-  background-color: #1d1d1d;
-  color: #fff;
-  padding-left: 12rem;
+  background-color: $background_color;
+  color: $main_color;
+  padding-left: $main-menu_width;
   display: block;
   min-width: 320px;
   overflow-y: scroll;

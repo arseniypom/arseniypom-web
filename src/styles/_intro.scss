@@ -1,4 +1,129 @@
 .intro {
-  font-size: 4rem;
-  line-height: 8rem;
+  height: 100vh;
+  position: relative;
+  padding-top: 8rem;
+
+  &_header{
+    font-size: 6.3rem;
+    line-height: $intro-header_line-height;
+    position: absolute;
+    margin-left: 1rem;
+    padding: 0rem 2rem;
+    background-color: #1d1d1d;
+
+    &_first-line {
+      top: $intro-header_margin-top;
+      padding-top: 1rem;
+      // left: 0;
+    }
+    &_second-line {
+      top: calc(#{$intro-header_margin-top} + #{$intro-header_line-height});
+      // left: 7%;
+    }
+    &_third-line {
+      top: calc(#{$intro-header_margin-top} + #{$intro-header_line-height * 2});
+      padding-bottom: 1rem;
+      // right: 0;
+    }
+
+
+    &_letter {
+      // background-color: black;
+      transition: all .2s ease-in;
+      cursor: default;
+      &_first {
+        margin-left: 2rem;
+      }
+
+      &_main {
+        color: lightblue;
+      }
+
+      &:hover {
+        color: greenyellow;
+      }
+    }
+  }
+
+  &_board{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  // &_option {
+  //   position: absolute;
+  //   right: 0;
+  //   bottom: 0;
+  //   display: flex;
+  //   flex-direction: column;
+  // }
 }
+
+.square {
+  width: 1rem;
+  height: 1rem;
+  background-color: #2d2d2d;
+  margin: 2px;
+  // box-shadow: 0 0 2px #000;
+  transition: 2s ease;
+}
+
+.square:hover {
+  transition-duration: 0s;
+}
+
+// .intro_option_button {
+//   background: #1d1d1d;
+//   border: none;
+//   padding: .7rem 1.3rem;
+//   margin: .3rem;
+//   border-radius: 40px;
+//   font-weight: 700;
+//   cursor: pointer;
+
+//   span {
+//     pointer-events: none;
+//   }
+// }
+
+// .color-palette-button-active,
+// .color-palette-button:hover {
+//   background: #3b3b3b;
+//   box-shadow: 0 0 7px #3b3b3b;
+// }
+
+// .default-palette-button {
+//   color: #fff;
+// }
+
+// .pinky-palette-button {
+//   color: #FF5D8F;
+// }
+
+// .blue-palette-button {
+//   color: #00B4D8;
+// }
+
+// .letter-1 {
+//   color: #FF8700;
+// }
+// .letter-2 {
+//   color: #FFD300;
+// }
+// .letter-3 {
+//   color: #DEFF0A;
+// }
+// .letter-4 {
+//   color: #0AFF99;
+// }
+// .letter-5 {
+//   color: #0AEFFF;
+// }
+// .letter-6 {
+//   color: #147DF5;
+// }
+// .letter-7 {
+//   color: #BE0AFF;
+// }
