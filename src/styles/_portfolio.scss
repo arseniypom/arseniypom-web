@@ -1,17 +1,23 @@
 .portfolio {
   display: flex;
   flex-direction: column;
-  padding: 2rem 1rem;
+  padding: 2rem 0;
 
   &_heading {
     max-width: 30rem;
     text-align: justify;
+    padding: 0 1rem;
 
     p {
       font-style: italic;
     }
   }
 }
+
+// .project-cards_link {
+//   display: block;
+//   width: fit-content;
+// }
 
 .project-cards {
   display: flex;
@@ -21,9 +27,10 @@
   width: 100%;
 
   &_item {
-    width: 18rem;
+    width: 25%;
     height: 18rem;
     position: relative;
+    // padding-top: 100%;
 
     &_img {
       width: 100%;

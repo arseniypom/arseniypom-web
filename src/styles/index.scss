@@ -3,8 +3,15 @@
 @import 'variables';
 @import 'main-menu';
 @import 'intro';
+@import 'about';
 @import 'portfolio';
 @import 'footer';
+
+* {
+  outline: none;
+  text-decoration: none;
+  color: inherit;
+}
 
 html {
   scroll-behavior: smooth;

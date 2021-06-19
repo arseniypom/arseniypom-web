@@ -1,12 +1,16 @@
 .intro {
   height: 100vh;
   position: relative;
-  padding-top: 8rem;
+  padding-top: 6rem;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
 
   &_header{
     font-size: 6.3rem;
     line-height: $intro-header_line-height;
     position: absolute;
+    left: 0;
     margin-left: 1rem;
     padding: 0rem 2rem;
     background-color: #1d1d1d;
@@ -28,7 +32,6 @@
 
 
     &_letter {
-      // background-color: black;
       transition: all .2s ease-in;
       cursor: default;
       &_first {
@@ -50,15 +53,35 @@
     justify-content: center;
     flex-wrap: wrap;
     width: 100%;
+    height: fit-content;
   }
 
-  // &_option {
-  //   position: absolute;
-  //   right: 0;
-  //   bottom: 0;
-  //   display: flex;
-  //   flex-direction: column;
-  // }
+  &_scroll-down {
+    position: absolute;
+    width: 9rem;
+    height: auto;
+    -webkit-animation: rotation 13s infinite linear;
+    animation: rotation 13s infinite linear;
+    bottom: 0;
+    margin: 0 auto;
+  }
+}
+
+@-webkit-keyframes rotation {
+  from {
+      -webkit-transform: rotate(0deg);
+  }
+  to {
+      -webkit-transform: rotate(359deg);
+  }
+}
+@keyframes rotation {
+  from {
+      transform: rotate(0deg);
+  }
+  to {
+      transform: rotate(359deg);
+  }
 }
 
 .square {
@@ -66,7 +89,6 @@
   height: 1rem;
   background-color: #2d2d2d;
   margin: 2px;
-  // box-shadow: 0 0 2px #000;
   transition: 2s ease;
 }
 

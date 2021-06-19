@@ -1,5 +1,6 @@
 import React from "react";
 import Square from "./Square";
+import scrollDownImg from '../images/round_letters.svg';
 
 const Intro: React.FC = () => {
   const introScreen: any = React.useRef();
@@ -105,6 +106,7 @@ const Intro: React.FC = () => {
           <span className="letter-7">w</span>
         </button>
       </div> */}
+      <img src={scrollDownImg} className="intro_scroll-down"></img>
     </div>
   )
 }
