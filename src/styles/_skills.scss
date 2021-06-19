@@ -1,0 +1,62 @@
+.skills-section {
+  width: 100%;
+  padding: 2rem 1rem;
+  box-sizing: border-box;
+}
+
+.skills {
+  width: 100%;
+  max-width: 75rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+  &_card {
+    width: 100%;
+    max-width: 15rem;
+    padding: 2rem 1rem 1rem;
+    margin: .5rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 40px;
+    background-color: #2d2d2d;
+
+    &_heading {
+      margin: 0 0 .5rem;
+      text-align: center;
+    }
+
+    &_list {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      list-style: none;
+      padding-left: 0;
+
+      &_item {
+        width: 100%;
+        max-width: 6rem;
+        display: flex;
+        padding: .8rem;
+        margin-bottom: .5rem;
+        align-items: center;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        border-radius: 20px;
+        border: 1px solid #3d3d3d;
+        box-sizing: border-box;
+
+        img {
+          width: 2rem;
+          height: 2rem;
+          margin-bottom: .7rem;
+        }
+
+        p {
+          font-size: .8rem;
+        }
+      }
+    }
+  }
+}

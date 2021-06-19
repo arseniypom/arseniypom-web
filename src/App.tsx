@@ -1,5 +1,6 @@
 import React from 'react';
-import { Navbar, Intro, About, Portfolio, Footer } from "./components";
+import 'aos/dist/aos.css';
+import { Navbar, Intro, About, Skills, Portfolio, Footer } from "./components";
 
 function App() {
   return <>
@@ -7,6 +8,7 @@ function App() {
     <main className="container">
       <Intro />
       <About />
+      <Skills />
       <Portfolio />
       <Footer />
     </main>

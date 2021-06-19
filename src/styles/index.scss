@@ -4,6 +4,7 @@
 @import 'main-menu';
 @import 'intro';
 @import 'about';
+@import 'skills';
 @import 'portfolio';
 @import 'footer';
 
@@ -11,6 +12,7 @@
   outline: none;
   text-decoration: none;
   color: inherit;
+  margin: 0;
 }
 
 html {
@@ -35,4 +37,10 @@ body {
   min-width: 320px;
   overflow-y: scroll;
   overflow-x: hidden;
+}
+
+.section-heading {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
 }

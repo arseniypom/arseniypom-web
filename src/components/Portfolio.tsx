@@ -42,9 +42,9 @@ const Portfolio = () => {
 
 
   return (
-    <div className="portfolio" id="portfolio">
+    <section className="portfolio" id="portfolio">
       <div className="portfolio_heading">
-        <h1>My Portfolio</h1>
+        <div className="section-heading">My Portfolio</div>
         <p>Here are some of my works Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa ea possimus, ullam quo illum vitae rem voluptas, amet, vel sequi reprehenderit</p>
       </div>
       <div className="project-cards">
@@ -54,7 +54,7 @@ const Portfolio = () => {
           })
         }
       </div>
-    </div>
+    </section>
   )
 }
 
