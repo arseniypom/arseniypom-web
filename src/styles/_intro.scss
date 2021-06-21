@@ -8,26 +8,29 @@
 
   &_header{
     font-size: 6.3rem;
+    font-weight: normal;
     line-height: $intro-header_line-height;
     position: absolute;
     left: 0;
-    margin-left: 1rem;
+    margin: 0 0 0 1rem;
     padding: 0rem 2rem;
     background-color: #1d1d1d;
 
     &_first-line {
       top: $intro-header_margin-top;
       padding-top: 1rem;
-      // left: 0;
+      z-index: 2;
+      white-space: nowrap;
+      overflow: hidden;
+      width: auto;
     }
     &_second-line {
-      top: calc(#{$intro-header_margin-top} + #{$intro-header_line-height});
-      // left: 7%;
+      top: calc(#{$intro-header_margin-top} + #{$intro-header_line-height} + .2rem);
+      z-index: 1;
     }
     &_third-line {
-      top: calc(#{$intro-header_margin-top} + #{$intro-header_line-height * 2});
+      top: calc(#{$intro-header_margin-top} + #{$intro-header_line-height * 2} - .5rem);
       padding-bottom: 1rem;
-      // right: 0;
     }
 
 
@@ -39,11 +42,11 @@
       }
 
       &_main {
-        color: lightblue;
+        color: #48bfe3;
       }
 
       &:hover {
-        color: greenyellow;
+        color: #7400b8;
       }
     }
   }
@@ -58,7 +61,7 @@
 
   &_scroll-down {
     position: absolute;
-    width: 9rem;
+    width: 8rem;
     height: auto;
     -webkit-animation: rotation 13s infinite linear;
     animation: rotation 13s infinite linear;

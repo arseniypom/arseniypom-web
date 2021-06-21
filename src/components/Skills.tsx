@@ -14,7 +14,7 @@ import {
   jiraImg,
   confluenceImg,
   agileImg
-} from '../images';
+} from '../images/skills-icons';
 
 function Skills() {
   AOS.init();

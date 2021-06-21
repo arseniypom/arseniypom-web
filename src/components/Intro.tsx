@@ -11,13 +11,14 @@ const Intro: React.FC = () => {
 
   const colorPalettes: ColorPalettes = {
     default: ['264653', '2A9D8F', 'E9C46A', 'F4A261', 'E76F51'],
+    neon: ['7400B8', '6930C3', '5E60CE', '5390D9', '4EA8DE', '48BFE3', '56CFE1', '64DFDF', '72EFDD', '80FFDB'],
     pinky: ['FADDE1', 'FFC4D6', 'FFA6C1', 'FF87AB', 'FF5D8F', 'FF97B7', 'FFACC5', 'FFCAD4'],
     blue: ['03045E', '023E8A', '0077B6', '0096C7', '00B4D8', '48CAE4', '90E0EF', 'ADE8F4'],
     rainbow: ['FF0000', 'FF8700', 'DEFF0A', 'A1FF0A', '0AEFFF', '580AFF', 'BE0AFF']
   }
 
   // const [activeColorPaletteName, setActiveColorPaletteName] = React.useState<string>('default');
-  const [activeColorPalette, setActiveColorPalette] = React.useState<string[]>(colorPalettes.default);
+  const [activeColorPalette, setActiveColorPalette] = React.useState<string[]>(colorPalettes.neon);
   const [squaresArray, setSquaresArray] = React.useState<JSX.Element[]>([]);
 
   React.useEffect(() => {
@@ -40,7 +41,7 @@ const Intro: React.FC = () => {
 
 
   return (
-    <div ref={introScreen} className="intro">
+    <div ref={introScreen} id="home" className="intro">
       <h1 className="intro_header intro_header_first-line">
         <span className="intro_header_letter">H</span>
         <span className="intro_header_letter">i</span>

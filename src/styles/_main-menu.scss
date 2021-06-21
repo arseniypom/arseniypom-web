@@ -37,13 +37,37 @@
 
     &_item {
       width: 100%;
-      // background-color: olivedrab;
       padding: 1rem;
+      font-size: .8rem;
       box-sizing: border-box;
       text-decoration: none;
       color: inherit;
       border-top: 1px solid #2d2d2d;
       text-align: center;
+      text-transform: uppercase;
+      transition: color .1s;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      position: relative;
+
+      svg {
+        filter: invert(99%) sepia(1%) saturate(533%) hue-rotate(5deg) brightness(115%) contrast(100%);
+        width: 1.2rem;
+        height: 1.3rem;
+        transition: all 0.2s ease-out 0s;
+      }
+
+      p {
+        text-transform: uppercase;
+        position: absolute;
+        text-align: center;
+        opacity: 0;
+        letter-spacing: 1px;
+        transition: all 0.4s ease-out 0s;
+      }
 
       &:last-child {
         border-bottom: 1px solid #2d2d2d;
@@ -51,6 +75,14 @@
 
       &:hover {
         background-color: #2d2d2d;
+        color: #48bfe3;
+      }
+      &:hover svg {
+        filter: invert(61%) sepia(98%) saturate(304%) hue-rotate(152deg) brightness(92%) contrast(92%);
+        opacity: 0;
+      }
+      &:hover p {
+        opacity: 1;
       }
     }
   }
