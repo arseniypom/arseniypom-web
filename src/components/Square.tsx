@@ -13,7 +13,7 @@ const Square: React.FC<SquareProps> = ({activeColorPalette}) => {
   }
   const resetColor = (e: React.MouseEvent<Element, MouseEvent>) : void => {
     const target = e.target as HTMLTextAreaElement;
-    target.style.backgroundColor = '#2d2d2d';
+    target.style.backgroundColor = '#1d1d1d';
     // element.style.boxShadow = `0 0 2px #000`;
   }
   

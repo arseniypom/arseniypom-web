@@ -17,13 +17,26 @@ const Intro: React.FC = () => {
     rainbow: ['FF0000', 'FF8700', 'DEFF0A', 'A1FF0A', '0AEFFF', '580AFF', 'BE0AFF']
   }
 
+  const letters = document.querySelectorAll('.intro_header_letter');
+
+  for (var i = 0; i < letters.length; i++) {
+    // for each iteration console.log a word
+    // and make a pause after it
+    (function (i) {
+        setTimeout(function () {
+          letters[i].classList.add('display')
+        }, 100 * i);
+    })(i);
+  };
+
+
   // const [activeColorPaletteName, setActiveColorPaletteName] = React.useState<string>('default');
   const [activeColorPalette, setActiveColorPalette] = React.useState<string[]>(colorPalettes.neon);
   const [squaresArray, setSquaresArray] = React.useState<JSX.Element[]>([]);
 
   React.useEffect(() => {
     const introDivRect = introScreen.current.getBoundingClientRect();
-    const squaresAmount = Math.floor(introDivRect.width / 20) * 25
+    const squaresAmount = Math.floor(introDivRect.width * introDivRect.height / (20*20));
 
     const newSquaresArray: Array<JSX.Element> = [];
     for (let i = 0; i < squaresAmount; i++) {
