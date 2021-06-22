@@ -1,0 +1,11 @@
+.heading-span {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(-100%);
+  transition: all 0.4s ease-in-out
+}
+
+.fade {
+ opacity: 1;
+ transform: translateY(0);
+}

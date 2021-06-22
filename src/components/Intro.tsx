@@ -20,8 +20,6 @@ const Intro: React.FC = () => {
   const letters = document.querySelectorAll('.intro_header_letter');
 
   for (var i = 0; i < letters.length; i++) {
-    // for each iteration console.log a word
-    // and make a pause after it
     (function (i) {
         setTimeout(function () {
           letters[i].classList.add('display')

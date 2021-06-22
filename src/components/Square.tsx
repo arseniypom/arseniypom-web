@@ -1,10 +1,10 @@
 import React from 'react';
 
-interface SquareProps {
+interface ISquareProps {
   activeColorPalette: Array<string>,
 }
 
-const Square: React.FC<SquareProps> = ({activeColorPalette}) => {
+const Square: React.FC<ISquareProps> = ({activeColorPalette}) => {
   const setColor = (e: React.MouseEvent<Element, MouseEvent>) : void => {
     const target = e.target as HTMLTextAreaElement;
     const color = '#' + getRandomColor();

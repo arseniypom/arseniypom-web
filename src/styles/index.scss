@@ -1,6 +1,7 @@
 @import '~normalize.css';
 @import 'fonts';
 @import 'variables';
+@import 'heading';
 @import 'main-menu';
 @import 'intro';
 @import 'about';
@@ -43,4 +44,6 @@ body {
   font-size: 4rem;
   font-weight: 700;
   margin-bottom: 1rem;
+  color: #08fdd8;
+  letter-spacing: 2px;
 }

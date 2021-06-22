@@ -37,7 +37,7 @@
 
 
     &_letter {
-      transition: all .2s ease-in;
+      transition: all .1s ease-in-out;
       cursor: default;
       display: none;
       &_first {
@@ -45,11 +45,11 @@
       }
 
       &_main {
-        color: #48bfe3;
+        color: #7400b8;
       }
 
       &:hover {
-        color: #7400b8;
+        color: #08fdd8;
       }
     }
   }

@@ -1,5 +1,5 @@
 import React from 'react';
-import AOS from 'aos';
+import Heading from './Heading';
 
 import {
   htmlImg,
@@ -17,10 +17,10 @@ import {
 } from '../images/skills-icons';
 
 function Skills() {
-  AOS.init();
   return (
     <section className="skills-section" id="skills" >
-      <header className="section-heading">My skills</header>
+      <Heading text="My skills"/>
+      {/* <header className="section-heading">My skills</header> */}
       <div className="skills">
         <div className="skills_card" data-aos="flip-up" data-aos-delay="100" data-aos-duration="1000" data-aos-once="true">
           <h3 className="skills_card_heading">Basics</h3>

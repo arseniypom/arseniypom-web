@@ -1,6 +1,5 @@
 import React from "react";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHome, faTools } from '@fortawesome/free-solid-svg-icons';
+
 import {
   HomeIcon,
   ToolsIcon,
