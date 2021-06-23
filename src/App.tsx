@@ -1,7 +1,7 @@
 import React from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { Navbar, Intro, About, Skills, Portfolio, Footer } from "./components";
+import { Navbar, Intro, About, Skills, Portfolio, Contact, Footer } from "./components";
 
 function App() {
   AOS.init();
@@ -13,7 +13,8 @@ function App() {
       <About />
       <Skills />
       <Portfolio />
-      <Footer />
+      <Contact />
+      {/* <Footer /> */}
     </main>
   </>;
 }

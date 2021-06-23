@@ -1,56 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-
 @import '~normalize.css';
+
 @import 'fonts';
 @import 'variables';
+@import 'general';
 @import 'heading';
 @import 'main-menu';
 @import 'intro';
 @import 'about';
 @import 'skills';
 @import 'portfolio';
+@import 'contact';
 @import 'footer';
-
-* {
-  outline: none;
-  text-decoration: none;
-  color: inherit;
-  margin: 0;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  margin: 0;
-
-  background-color: $background_color;
-  color: $main_color;
-  padding-left: $main-menu_width;
-  display: block;
-  min-width: 320px;
-  overflow-y: scroll;
-  overflow-x: hidden;
-}
-
-h1, h2, header {
-  font-family: 'Coolvetica', sans-serif;
-}
-
-h3, h4, a, p, li, label {
-  font-family: 'Roboto', sans-serif;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
-.section-heading {
-  font-size: 4rem;
-  font-weight: 500;
-  margin-bottom: 1rem;
-  color: #08fdd8;
-  letter-spacing: 2px;
-}
