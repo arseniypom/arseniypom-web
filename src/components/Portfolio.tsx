@@ -1,5 +1,6 @@
 import React from "react";
 import ProjectCard from "./ProjectCard";
+import Heading from './Heading';
 
 import coffeeGuysImg from '../images/coffee-guys.png';
 import chungKingImg from '../images/IMG_8633.jpg';
@@ -44,7 +45,7 @@ const Portfolio = () => {
   return (
     <section className="portfolio" id="portfolio">
       <div className="portfolio_heading">
-        <div className="section-heading">My Portfolio</div>
+        <Heading text="My Portfolio" />
         <p>Here are some of my works Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa ea possimus, ullam quo illum vitae rem voluptas, amet, vel sequi reprehenderit</p>
       </div>
       <div className="project-cards">

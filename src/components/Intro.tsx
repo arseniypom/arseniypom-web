@@ -23,7 +23,7 @@ const Intro: React.FC = () => {
     (function (i) {
         setTimeout(function () {
           letters[i].classList.add('display')
-        }, 100 * i);
+        }, 120 * i);
     })(i);
   };
 

@@ -40,6 +40,11 @@
       transition: all .1s ease-in-out;
       cursor: default;
       display: none;
+
+      animation-duration: 1s;
+      animation-fill-mode: both;
+      animation-iteration-count: 1;
+
       &_first {
         margin-left: 2rem;
       }
@@ -50,6 +55,7 @@
 
       &:hover {
         color: #08fdd8;
+        animation-name: rubberBand;
       }
     }
   }
@@ -73,10 +79,35 @@
   }
 }
 
-@keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
-}
+@keyframes rubberBand {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+
+  30% {
+    transform: scale3d(1.25, 0.75, 1);
+  }
+
+  40% {
+    transform: scale3d(0.75, 1.25, 1);
+  }
+
+  50% {
+    transform: scale3d(1.15, 0.85, 1);
+  }
+
+  65% {
+    transform: scale3d(.95, 1.05, 1);
+  }
+
+  75% {
+    transform: scale3d(1.05, .95, 1);
+  }
+
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+} 
 
 @keyframes blink-caret {
   from, to { border-color: transparent }
@@ -112,60 +143,6 @@
   transition-duration: 0s;
 }
 
-// .intro_option_button {
-//   background: #1d1d1d;
-//   border: none;
-//   padding: .7rem 1.3rem;
-//   margin: .3rem;
-//   border-radius: 40px;
-//   font-weight: 700;
-//   cursor: pointer;
-
-//   span {
-//     pointer-events: none;
-//   }
-// }
-
-// .color-palette-button-active,
-// .color-palette-button:hover {
-//   background: #3b3b3b;
-//   box-shadow: 0 0 7px #3b3b3b;
-// }
-
-// .default-palette-button {
-//   color: #fff;
-// }
-
-// .pinky-palette-button {
-//   color: #FF5D8F;
-// }
-
-// .blue-palette-button {
-//   color: #00B4D8;
-// }
-
-// .letter-1 {
-//   color: #FF8700;
-// }
-// .letter-2 {
-//   color: #FFD300;
-// }
-// .letter-3 {
-//   color: #DEFF0A;
-// }
-// .letter-4 {
-//   color: #0AFF99;
-// }
-// .letter-5 {
-//   color: #0AEFFF;
-// }
-// .letter-6 {
-//   color: #147DF5;
-// }
-// .letter-7 {
-//   color: #BE0AFF;
-// }
-
 .display {
-  display: initial;
+  display: inline-block;
 }

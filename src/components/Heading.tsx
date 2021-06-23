@@ -1,13 +1,10 @@
 import React from 'react';
-import {Animated} from "react-animated-css";
 
 interface IHeadingfProps {
   text: string;
 }
 
 const Heading: React.FC<IHeadingfProps> = ({text}) => {
-
-  const [isOnScreen, setOnScreen] = React.useState<boolean>(true);
 
   const heading: any = React.useRef();
   const characters = text.split('');
@@ -23,8 +20,8 @@ const Heading: React.FC<IHeadingfProps> = ({text}) => {
         }
         letter.innerText = char;
 
-        letter.dataset.aos="fade-down";
-        letter.dataset.aosDuration="300";
+        letter.dataset.aos="zoom-in";
+        letter.dataset.aosDuration="200";
         letter.dataset.aosDelay=`${i * 150}`
   
         heading.current.append(letter)

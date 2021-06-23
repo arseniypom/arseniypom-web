@@ -19,7 +19,7 @@ import {
 function Skills() {
   return (
     <section className="skills-section" id="skills" >
-      <Heading text="My skills"/>
+      <Heading text="My Skills"/>
       {/* <header className="section-heading">My skills</header> */}
       <div className="skills">
         <div className="skills_card" data-aos="flip-up" data-aos-delay="100" data-aos-duration="1000" data-aos-once="true">
