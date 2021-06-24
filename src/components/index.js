@@ -1,3 +1,4 @@
+export {default as ResumeLink} from './ResumeLink';
 export {default as Intro} from './Intro';
 export {default as Navbar} from './Navbar';
 export {default as About} from './About';

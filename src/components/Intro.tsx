@@ -137,8 +137,8 @@ const Intro: React.FC = () => {
       <h1 ref={firstLine} className="intro_header intro_header_first-line"></h1>
       <h1 ref={secondLine} className="intro_header intro_header_second-line"></h1>
       <h1 ref={thirdLine} className="intro_header intro_header_third-line"></h1>
-      <p className="text-muted intro_text">Full Stack Developer / Python Programmer / Freelancer</p>
-      <button className="animated-button intro_contact-button">Reach me</button>
+      <p className="text-muted intro_text">Front-End / Back-End Developer / Freelancer</p>
+      <a href="#contact"><button className="animated-button intro_contact-button">Reach me</button></a>
       <div ref={squaresBoard} onMouseOver={(e) => squareMouseOverHandle(e)} className="intro_board" id="board">
         {squaresArray}
       </div>

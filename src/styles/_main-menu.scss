@@ -75,7 +75,7 @@
 
       &:hover {
         background-color: #2d2d2d;
-        color: #08fdd8;
+        color: $accent-color;
       }
       &:hover svg {
         filter: invert(61%) sepia(98%) saturate(304%) hue-rotate(152deg) brightness(92%) contrast(92%);

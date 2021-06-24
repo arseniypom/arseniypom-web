@@ -14,7 +14,7 @@ body {
   margin: 0;
 
   background-color: $background_color;
-  color: $main_color;
+  color: $main_text-color;
   padding-left: $main-menu_width;
   display: block;
   min-width: 320px;
@@ -39,7 +39,7 @@ code {
   font-size: 4rem;
   font-weight: 500;
   margin-bottom: 1rem;
-  color: #08fdd8;
+  color: $accent-color;
   letter-spacing: 2px;
 }
 
@@ -51,8 +51,8 @@ code {
 .animated-button {
   position: relative;
 
-  border: 1px solid #08fdd8;
-  color: #08fdd8;
+  border: 1px solid $accent-color;
+  color: $accent-color;
   cursor: pointer;
   letter-spacing: 1px;
 
@@ -75,7 +75,7 @@ code {
     left: 0;
     right: 0;
     bottom: 0;
-    background: #08fdd8;
+    background: $accent-color;
     -webkit-transform: scaleX(0);
     transform: scaleX(0);
     -webkit-transform-origin: 0 50%;
@@ -89,5 +89,39 @@ code {
   }
   &:hover::before, &:focus::before {
     transform: scaleX(1);
+  }
+}
+
+.resume-link {
+  width: 7rem;
+  height: 3rem;
+  background-color: #3d3d3d;
+  // background-image: url('../images/bookmark.png');
+  // background-size: 100% 100%;
+  // background-position: center;
+  // background-repeat: no-repeat;
+  color: $accent-color;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  position: absolute;
+  right: -2rem;
+  top: 1rem;
+  z-index: 100;
+
+  transition: .5s ease;
+
+  p {
+    font-size: .9rem;
+    margin-left: .5rem;
+  }
+
+  &:hover {
+    right: -1rem;
+    background-color: $accent-color;
+    color: #000;
   }
 }
