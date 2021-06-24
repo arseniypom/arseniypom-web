@@ -12,7 +12,6 @@
     position: absolute;
     left: 0;
     margin: 0 0 0 3rem;
-    background-color: #1d1d1d;
 
     &_first-line {
       top: $intro-header_margin-top;
@@ -24,7 +23,7 @@
       top: calc(#{$intro-header_margin-top} + #{$intro-header_line-height} + .2rem);
       z-index: 2;
       white-space: nowrap;
-      animation: blink-caret .75s step-end infinite;
+      // animation: blink-caret .75s step-end infinite;
     }
     &_third-line {
       top: calc(#{$intro-header_margin-top} + #{$intro-header_line-height * 2} - .5rem);
@@ -35,20 +34,11 @@
       overflow: hidden;
     }
 
-
     &_letter {
-      transition: all .1s ease-in-out;
       cursor: default;
-      display: none;
-
       animation-duration: 1s;
       animation-fill-mode: both;
       animation-iteration-count: 1;
-
-      &_first {
-        margin-left: 2rem;
-      }
-
       &_main {
         color: #7400b8;
       }
@@ -58,6 +48,26 @@
         animation-name: rubberBand;
       }
     }
+  }
+
+  &_text {
+    margin-left: 3rem;
+    font-size: 0.8rem;
+    background-color: #1d1d1d;
+    position: absolute;
+    top: calc(#{$intro-header_margin-top} + #{$intro-header_line-height * 3} + .5rem);
+    left: 0;
+  }
+
+  &_contact-button {
+    width: fit-content;
+    background-color: #1d1d1d;
+    padding: .7rem 1.4rem;
+    margin-left: 3rem;
+
+    position: absolute;
+    top: calc(#{$intro-header_margin-top} + #{$intro-header_line-height * 3} + 2.5rem);
+    left: 0;
   }
 
   &_board{

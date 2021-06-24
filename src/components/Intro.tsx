@@ -1,9 +1,14 @@
 import React from "react";
-import Square from "./Square";
+
 import scrollDownImg from '../images/round_letters.svg';
 
 const Intro: React.FC = () => {
   const introScreen: any = React.useRef();
+  const squaresBoard: any = React.useRef();
+
+  const firstLine: any = React.useRef();
+  const secondLine: any = React.useRef();
+  const thirdLine: any = React.useRef();
 
   interface ColorPalettes {
     [key: string]: string[];
@@ -17,30 +22,106 @@ const Intro: React.FC = () => {
     rainbow: ['FF0000', 'FF8700', 'DEFF0A', 'A1FF0A', '0AEFFF', '580AFF', 'BE0AFF']
   }
 
-  const letters = document.querySelectorAll('.intro_header_letter');
-
-  for (var i = 0; i < letters.length; i++) {
-    (function (i) {
-        setTimeout(function () {
-          letters[i].classList.add('display')
-        }, 120 * i);
-    })(i);
-  };
-
-
-  // const [activeColorPaletteName, setActiveColorPaletteName] = React.useState<string>('default');
   const [activeColorPalette, setActiveColorPalette] = React.useState<string[]>(colorPalettes.neon);
   const [squaresArray, setSquaresArray] = React.useState<JSX.Element[]>([]);
+
+  const squareMouseOverHandle = (e: React.MouseEvent<Element, MouseEvent>) : void => {
+    const target = e.target as HTMLElement;
+    if (target.dataset.role === 'square') {
+      setColor(target);
+    }
+  }
+
+  const setColor = (target: HTMLElement, timer: number = 0) : void => {
+
+    setTimeout(() => {
+      target.style.backgroundColor = '#' + getRandomColor();
+    }, timer);
+
+    setTimeout(() => {
+      target.style.backgroundColor = '#1d1d1d';
+    }, timer + 700);
+  }
+  
+  const getRandomColor = () => {
+    const colorIndex: number = Math.round(Math.random() * activeColorPalette.length);
+    return activeColorPalette[colorIndex];
+  }
+
+  const getRandomElement = (elementsArray: NodeListOf<Element>) => {
+    return elementsArray[Math.round(Math.random() * (elementsArray.length-1))] as any;
+  }
+
+  React.useEffect(() => {
+    // const letters = document.querySelectorAll('.intro_header_letter');
+
+    // for (var i = 0; i < letters.length; i++) {
+    //   ((i) => {
+    //       setTimeout(function () {
+    //         letters[i].classList.add('display')
+    //       }, 120 * i);
+    //   })(i);
+    // };
+    const characters = "Hi,I'm Arseniy,web developer".split('');
+    characters.forEach((char, i) => {
+      // setTimeout(() => {
+      //   console.log(char, i);
+      // }, i * 200);
+      const letter = document.createElement('span');
+      if (char === ' ') {
+        letter.style.display = 'inline';
+      } else {
+        letter.style.display = 'inline-block';
+      }
+      letter.innerText = char;
+      letter.classList.add('intro_header_letter');
+      char === 'A' && letter.classList.add('intro_header_letter_main');
+
+      letter.dataset.aos="zoom-in";
+      letter.dataset.aosDuration="200";
+      letter.dataset.aosDelay=`${i * 100}`;
+
+      if (i < 3) {
+        firstLine.current.append(letter);
+      } else if (i < 15) {
+        secondLine.current.append(letter);
+      } else if (i < 28) {
+        thirdLine.current.append(letter);
+      }
+    });
+  }, []);
 
   React.useEffect(() => {
     const introDivRect = introScreen.current.getBoundingClientRect();
     const squaresAmount = Math.floor(introDivRect.width * introDivRect.height / (20*20));
-
     const newSquaresArray: Array<JSX.Element> = [];
     for (let i = 0; i < squaresAmount; i++) {
-      newSquaresArray.push(<Square key={i} activeColorPalette={activeColorPalette} />);
+      newSquaresArray.push(<div key={i} className="square" data-role="square"></div>)
     }
-    setSquaresArray(newSquaresArray);
+
+    (async () => {
+      try {
+        await setSquaresArray(newSquaresArray);
+        const squares = document.querySelectorAll('[data-role=square]');
+        const intervalId = setInterval(() => {
+          // for (let i = 0; i < 7; i++) {
+            setColor(getRandomElement(squares), 300);
+            setColor(getRandomElement(squares), 400);
+            setColor(getRandomElement(squares), 500);
+            setColor(getRandomElement(squares), 600);
+            setColor(getRandomElement(squares), 700);
+            setColor(getRandomElement(squares), 800);
+            setColor(getRandomElement(squares), 900);
+          // }
+        }, 500);
+
+        setTimeout(() => {
+          clearInterval(intervalId);
+        }, 2000);
+      } catch (error) {
+        console.log(error.message);
+      }
+    })();
 
   }, [introScreen]);
 
@@ -53,39 +134,12 @@ const Intro: React.FC = () => {
 
   return (
     <div ref={introScreen} id="home" className="intro">
-      <h1 className="intro_header intro_header_first-line">
-        <span className="intro_header_letter">H</span>
-        <span className="intro_header_letter">i</span>
-        <span className="intro_header_letter">,</span>
-      </h1>
-      <h1 className="intro_header intro_header_second-line">
-        <span className="intro_header_letter">I</span>
-        <span className="intro_header_letter">'</span>
-        <span className="intro_header_letter">m</span>
-        <span className="intro_header_letter intro_header_letter_first intro_header_letter_main">A</span>
-        <span className="intro_header_letter">r</span>
-        <span className="intro_header_letter">s</span>
-        <span className="intro_header_letter">e</span>
-        <span className="intro_header_letter">n</span>
-        <span className="intro_header_letter">i</span>
-        <span className="intro_header_letter">y</span>
-        <span className="intro_header_letter">,</span>
-      </h1>
-      <h1 className="intro_header intro_header_third-line">
-        <span className="intro_header_letter">w</span>
-        <span className="intro_header_letter">e</span>
-        <span className="intro_header_letter">b</span>
-        <span className="intro_header_letter intro_header_letter_first">d</span>
-        <span className="intro_header_letter">e</span>
-        <span className="intro_header_letter">v</span>
-        <span className="intro_header_letter">e</span>
-        <span className="intro_header_letter">l</span>
-        <span className="intro_header_letter">o</span>
-        <span className="intro_header_letter">p</span>
-        <span className="intro_header_letter">e</span>
-        <span className="intro_header_letter">r</span>
-      </h1>
-      <div className="intro_board" id="board">
+      <h1 ref={firstLine} className="intro_header intro_header_first-line"></h1>
+      <h1 ref={secondLine} className="intro_header intro_header_second-line"></h1>
+      <h1 ref={thirdLine} className="intro_header intro_header_third-line"></h1>
+      <p className="text-muted intro_text">Full Stack Developer / Python Programmer / Freelancer</p>
+      <button className="animated-button intro_contact-button">Reach me</button>
+      <div ref={squaresBoard} onMouseOver={(e) => squareMouseOverHandle(e)} className="intro_board" id="board">
         {squaresArray}
       </div>
       {/* <div className="intro_option" onClick={colorButtonClickHandle}>
@@ -118,7 +172,7 @@ const Intro: React.FC = () => {
           <span className="letter-7">w</span>
         </button>
       </div> */}
-      <img src={scrollDownImg} className="intro_scroll-down"></img>
+      <img src={scrollDownImg} className="intro_scroll-down" alt="scroll down"></img>
     </div>
   )
 }
