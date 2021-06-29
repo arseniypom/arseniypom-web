@@ -2,39 +2,65 @@
   width: 100%;
   padding: 2rem 1rem;
   box-sizing: border-box;
+  height: 100vh;
+  display: flex;
+  align-items: center;
 }
 
 .skills {
   width: 100%;
-  max-width: 75rem;
-  margin: 0 auto;
   display: flex;
+  align-items: center;
   justify-content: space-around;
-  flex-wrap: wrap;
+
+  &_info {
+    width: 100%;
+    max-width: 35rem;
+  }
+
+  &_heading {
+    margin-bottom: 1rem;
+    header {
+      margin-bottom: 1rem;
+    }
+  }
+
+  &_description {
+    max-width: 30rem;
+    text-align: justify;
+  }
+
+  &_cards {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
 
   &_card {
     width: 100%;
-    max-width: 15rem;
-    padding: 2rem 1rem 1rem;
+    max-width: 16rem;
+    padding: 1rem;
     margin: .5rem;
     display: flex;
     flex-direction: column;
     border-radius: 40px;
     background-color: #2d2d2d;
-
+  
     &_heading {
-      margin: 0 0 .5rem;
+      margin: 0 0 1rem;
       text-align: center;
       letter-spacing: 1px;
     }
-
+  
     &_list {
       display: flex;
       justify-content: space-around;
       flex-wrap: wrap;
       list-style: none;
       padding-left: 0;
-
+  
       &_item {
         width: 100%;
         max-width: 6rem;
@@ -47,17 +73,24 @@
         border-radius: 20px;
         border: 1px solid #3d3d3d;
         box-sizing: border-box;
-
+  
         img {
           width: 2rem;
           height: 2rem;
           margin-bottom: .7rem;
         }
-
+  
         p {
           font-size: .8rem;
         }
       }
+    }
+  }
+
+  &_img {
+    img {
+      width: 100%;
+      max-width: 35rem;
     }
   }
 }

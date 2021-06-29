@@ -1,19 +1,3 @@
-// export const htmlImg = require('./html.svg');
-// export const cssImg = require('./css.svg');
-// export const sassImg = require('./sass.svg');
-// export const jsImg = require('./javascript.svg');
-
-
-// export const reactImg = require('./react.svg');
-// export const reduxImg = require('./redux.svg');
-// export const typescriptImg = require('./typescript.svg');
-// export const jqueryImg = require('./jquery.svg');
-
-// export const gitImg = require('./git.svg');
-// export const jiraImg = require('./jira.svg');
-// export const confluenceImg = require('./confluence.svg');
-// export const agileImg = require('./jquery.svg');
-
 import htmlImg from './html.svg';
 import cssImg from './css.svg';
 import sassImg from './sass.svg';
@@ -30,6 +14,10 @@ import jiraImg from './jira.png';
 import confluenceImg from './confluence.svg';
 import agileImg from './jquery.svg';
 
+import nodejsImg from './nodejs.svg';
+import expressImg from './express.png';
+import mongodbImg from './mongodb.png';
+
 export {
   htmlImg,
   cssImg,
@@ -42,5 +30,8 @@ export {
   gitImg,
   jiraImg,
   confluenceImg,
-  agileImg
+  agileImg,
+  nodejsImg,
+  expressImg,
+  mongodbImg
 };

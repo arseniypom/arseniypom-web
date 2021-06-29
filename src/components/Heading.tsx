@@ -31,7 +31,7 @@ const Heading: React.FC<IHeadingfProps> = ({text}) => {
 
 
   return (
-    <header ref={heading} className="section-heading"></header>
+    <header ref={heading} className="section_heading"></header>
   )
 }
 

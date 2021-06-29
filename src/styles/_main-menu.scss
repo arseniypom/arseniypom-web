@@ -28,7 +28,7 @@
     }
   }
 
-  &_links {
+  &_navigation {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -67,6 +67,7 @@
         opacity: 0;
         letter-spacing: 1px;
         transition: all 0.4s ease-out 0s;
+        font-size: .8rem;
       }
 
       &:last-child {
@@ -84,6 +85,96 @@
       &:hover p {
         opacity: 1;
       }
+    }
+  }
+
+  &_links {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    position: absolute;
+    bottom: 1rem;
+    left: 0;
+
+    &_item {
+      margin-bottom: .5rem;
+    }
+
+    .hexagon {
+      position: relative;
+      width: 20px; 
+      height: 11.55px;
+      background-color: #2d2d2d;
+      margin: 5.77px 0;
+      transition: background-color .3s ease;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      svg {
+        width: 11px;
+        height: 11px;
+      }
+    }
+    
+    .hexagon:before,
+    .hexagon:after {
+      content: "";
+      position: absolute;
+      width: 0;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      transition: border-color .3s ease;
+    }
+    .hexagon:before {
+      bottom: 100%;
+      border-bottom: 5.77px solid #2d2d2d;
+    }
+    .hexagon:after {
+      top: 100%;
+      width: 0;
+      border-top: 5.77px solid #2d2d2d;
+    }
+
+    .hexagon.github-link:hover {
+      background-color: $violet-color;
+      &:before {
+        border-bottom-color: $violet-color;
+      }
+      &:after {
+        border-top-color: $violet-color;
+      }
+    }
+    .hexagon.linkedin-link:hover {
+      background-color: #5390D9;
+      &:before {
+        border-bottom-color: #5390D9;
+      }
+      &:after {
+        border-top-color: #5390D9;
+      }
+    }
+    .hexagon.facebook-link:hover {
+      background-color: $accent-color;
+      &:before {
+        border-bottom-color: $accent-color;
+      }
+      &:after {
+        border-top-color: $accent-color;
+      }
+    }
+
+    .hexagon:hover {
+      background-color: red;
+    }
+    .hexagon:hover::before {
+      border-bottom-color: red;
+    }
+    .hexagon:hover::after {
+      border-top-color: red;
     }
   }
 }

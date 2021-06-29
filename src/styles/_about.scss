@@ -1,8 +1,32 @@
-.about {
-  max-width: 30rem;
+.about-section {
   padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-  p {
+.about {
+  width: 100%;
+  max-width: 70rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+
+  &_text {
+    max-width: 30rem;
     text-align: justify;
+
+    p {
+      margin-bottom: 1rem;
+    }
+  }
+
+  &_img {
+    max-width: 32rem;
+    height: fit-content;
+    img {
+      width: 100%;
+    }
   }
 }

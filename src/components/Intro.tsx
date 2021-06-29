@@ -1,6 +1,7 @@
 import React from "react";
 
-import scrollDownImg from '../images/round_letters.svg';
+import letterA from "../images/A-letter.png";
+import scrollDownImg from '../images/scroll-down.png';
 
 const Intro: React.FC = () => {
   const introScreen: any = React.useRef();
@@ -13,6 +14,11 @@ const Intro: React.FC = () => {
   interface ColorPalettes {
     [key: string]: string[];
   }
+
+  React.useEffect(() => {
+    const kek = document.querySelector('#animation');
+    kek?.remove();
+  }, [firstLine])
 
   const colorPalettes: ColorPalettes = {
     default: ['264653', '2A9D8F', 'E9C46A', 'F4A261', 'E76F51'],
@@ -53,32 +59,27 @@ const Intro: React.FC = () => {
   }
 
   React.useEffect(() => {
-    // const letters = document.querySelectorAll('.intro_header_letter');
-
-    // for (var i = 0; i < letters.length; i++) {
-    //   ((i) => {
-    //       setTimeout(function () {
-    //         letters[i].classList.add('display')
-    //       }, 120 * i);
-    //   })(i);
-    // };
     const characters = "Hi,I'm Arseniy,web developer".split('');
     characters.forEach((char, i) => {
-      // setTimeout(() => {
-      //   console.log(char, i);
-      // }, i * 200);
       const letter = document.createElement('span');
       if (char === ' ') {
         letter.style.display = 'inline';
       } else {
         letter.style.display = 'inline-block';
       }
-      letter.innerText = char;
       letter.classList.add('intro_header_letter');
-      char === 'A' && letter.classList.add('intro_header_letter_main');
 
-      letter.dataset.aos="zoom-in";
-      letter.dataset.aosDuration="200";
+      if (char === 'A') {
+        letter.classList.add('intro_header_letter-main');
+        letter.dataset.aos="letter-animation";
+        letter.dataset.aosDuration="800";
+      } else {
+        letter.classList.add('intro_header_letter-default');
+        letter.innerText = char;
+        letter.dataset.aos="zoom-in";
+        letter.dataset.aosDuration="200";
+      }
+
       letter.dataset.aosDelay=`${i * 100}`;
 
       if (i < 3) {
@@ -104,20 +105,14 @@ const Intro: React.FC = () => {
         await setSquaresArray(newSquaresArray);
         const squares = document.querySelectorAll('[data-role=square]');
         const intervalId = setInterval(() => {
-          // for (let i = 0; i < 7; i++) {
-            setColor(getRandomElement(squares), 300);
-            setColor(getRandomElement(squares), 400);
-            setColor(getRandomElement(squares), 500);
-            setColor(getRandomElement(squares), 600);
-            setColor(getRandomElement(squares), 700);
-            setColor(getRandomElement(squares), 800);
-            setColor(getRandomElement(squares), 900);
-          // }
-        }, 500);
+          for (let i = 1; i < 8; i++) {
+            setColor(getRandomElement(squares), i * 100 + 200);
+          }
+        }, 600);
 
-        setTimeout(() => {
-          clearInterval(intervalId);
-        }, 2000);
+        // setTimeout(() => {
+        //   clearInterval(intervalId);
+        // }, 5000);
       } catch (error) {
         console.log(error.message);
       }
@@ -133,47 +128,52 @@ const Intro: React.FC = () => {
 
 
   return (
-    <div ref={introScreen} id="home" className="intro">
-      <h1 ref={firstLine} className="intro_header intro_header_first-line"></h1>
-      <h1 ref={secondLine} className="intro_header intro_header_second-line"></h1>
-      <h1 ref={thirdLine} className="intro_header intro_header_third-line"></h1>
-      <p className="text-muted intro_text">Front-End / Back-End Developer / Freelancer</p>
-      <a href="#contact"><button className="animated-button intro_contact-button">Reach me</button></a>
-      <div ref={squaresBoard} onMouseOver={(e) => squareMouseOverHandle(e)} className="intro_board" id="board">
-        {squaresArray}
+    <section id="home" className="intro-section">
+      <div ref={introScreen} className="intro">
+        <h1 ref={firstLine} className="intro_header intro_header_first-line"></h1>
+        <h1 ref={secondLine} className="intro_header intro_header_second-line"></h1>
+        <h1 ref={thirdLine} className="intro_header intro_header_third-line"></h1>
+        <p data-aos="fade-down" data-aos-duration="500" data-aos-delay="2900" className="text-muted intro_text">Front-End / Back-End Developer / Freelancer</p>
+        <a data-aos="fade-down" data-aos-duration="800" data-aos-delay="3000" href="#contact"><button className="animated-button intro_contact-button">Reach me</button></a>
+        <div ref={squaresBoard} onMouseOver={(e) => squareMouseOverHandle(e)} className="intro_board" id="board">
+          {squaresArray}
+        </div>
+        {/* <div className="intro_option" onClick={colorButtonClickHandle}>
+          <button className={classNames(
+            "intro_option_button",
+            "default-palette-button",
+            {"color-palette-button-active": activeColorPaletteName === 'default'}
+          )} name="default">Default</button>
+          <button className={classNames(
+            "intro_option_button",
+            "pinky-palette-button",
+            {"color-palette-button-active": activeColorPaletteName === 'pinky'}
+          )} name="pinky">Pinky</button>
+          <button className={classNames(
+            "intro_option_button",
+            "blue-palette-button",
+            {"color-palette-button-active": activeColorPaletteName === 'blue'}
+          )} name="blue">Blue</button>
+          <button className={classNames(
+            "intro_option_button",
+            "rainbow-palette-button",
+            {"color-palette-button-active": activeColorPaletteName === 'rainbow'}
+          )} name="rainbow">
+            <span className="letter-1">R</span>
+            <span className="letter-2">a</span>
+            <span className="letter-3">i</span>
+            <span className="letter-4">n</span>
+            <span className="letter-5">b</span>
+            <span className="letter-6">o</span>
+            <span className="letter-7">w</span>
+          </button>
+        </div> */}
+        <a href="#about" className="intro_scroll-down">
+          <img src={scrollDownImg} className="" alt="scroll down" />
+          <span></span>
+        </a>
       </div>
-      {/* <div className="intro_option" onClick={colorButtonClickHandle}>
-        <button className={classNames(
-          "intro_option_button",
-          "default-palette-button",
-          {"color-palette-button-active": activeColorPaletteName === 'default'}
-        )} name="default">Default</button>
-        <button className={classNames(
-          "intro_option_button",
-          "pinky-palette-button",
-          {"color-palette-button-active": activeColorPaletteName === 'pinky'}
-        )} name="pinky">Pinky</button>
-        <button className={classNames(
-          "intro_option_button",
-          "blue-palette-button",
-          {"color-palette-button-active": activeColorPaletteName === 'blue'}
-        )} name="blue">Blue</button>
-        <button className={classNames(
-          "intro_option_button",
-          "rainbow-palette-button",
-          {"color-palette-button-active": activeColorPaletteName === 'rainbow'}
-        )} name="rainbow">
-          <span className="letter-1">R</span>
-          <span className="letter-2">a</span>
-          <span className="letter-3">i</span>
-          <span className="letter-4">n</span>
-          <span className="letter-5">b</span>
-          <span className="letter-6">o</span>
-          <span className="letter-7">w</span>
-        </button>
-      </div> */}
-      <img src={scrollDownImg} className="intro_scroll-down" alt="scroll down"></img>
-    </div>
+    </section>
   )
 }
 

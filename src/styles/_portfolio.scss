@@ -1,18 +1,17 @@
-.portfolio {
+.portfolio-section {
+  padding: 2rem 0;
+  height: 100vh;
+  
   display: flex;
   flex-direction: column;
-  padding: 2rem 0;
+  justify-content: center;
+}
 
-  &_heading {
-    max-width: 30rem;
-    text-align: justify;
-    padding: 0 1rem;
-    margin-bottom: 2rem;
-
-    p {
-      font-style: italic;
-    }
-  }
+.portfolio_heading {
+  max-width: 30rem;
+  text-align: justify;
+  padding: 0 1rem;
+  margin-bottom: 2rem;
 }
 
 // .project-cards_link {
@@ -29,7 +28,7 @@
 
   &_item {
     width: 25%;
-    height: 18rem;
+    height: 15rem;
     position: relative;
     // padding-top: 100%;
 
