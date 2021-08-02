@@ -105,11 +105,20 @@ select:-webkit-autofill:focus {
     filter: invert(78%) sepia(98%) saturate(718%) hue-rotate(95deg) brightness(101%) contrast(98%);
   }
 }
-
-@media (max-width: 767px) {
+@media (max-width: 1023px) {
+  .contact_form {
+    padding: 0 1rem;
+  }
+}
+@media (max-width: 768px) {
+  .contact {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
 
   .contact_form {
-  
+    height: 60%;
+    justify-content: center;
     &_group {
       flex-direction: column;
       input {
@@ -121,5 +130,13 @@ select:-webkit-autofill:focus {
         margin-left: 0;
       }
     }
+  }
+
+  .contact_map {
+    display: flex;
+    max-width: none;
+    width: 100%;
+    height: 40%;
+    margin-left: .5rem;
   }
 }

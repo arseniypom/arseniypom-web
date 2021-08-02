@@ -61,3 +61,31 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+  .portfolio-section {
+    padding: 0;
+  }
+  .portfolio {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &_heading {
+      margin: 0;
+      width: 100%;
+      max-width: 30rem;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+  .project-cards {
+
+    &_item {
+      width: 50%;
+    }
+  }
+}

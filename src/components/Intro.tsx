@@ -1,6 +1,5 @@
 import React from "react";
 
-import letterA from "../images/A-letter.png";
 import scrollDownImg from '../images/scroll-down.png';
 
 const Intro: React.FC = () => {
@@ -14,11 +13,6 @@ const Intro: React.FC = () => {
   interface ColorPalettes {
     [key: string]: string[];
   }
-
-  React.useEffect(() => {
-    const kek = document.querySelector('#animation');
-    kek?.remove();
-  }, [firstLine])
 
   const colorPalettes: ColorPalettes = {
     default: ['264653', '2A9D8F', 'E9C46A', 'F4A261', 'E76F51'],

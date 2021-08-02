@@ -10,7 +10,6 @@
   max-width: 70rem;
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
   align-items: center;
 
   &_text {
@@ -28,5 +27,21 @@
     img {
       width: 100%;
     }
+  }
+}
+
+@media (max-width: 1023px) {
+  .about {
+    &_img {
+      max-width: 20rem;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .about {
+    height: 100%;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-evenly;
   }
 }

@@ -6,7 +6,6 @@ import {
   chatImg,
   coffeeGuysImg,
   hangmanImg,
-  chungKingImg,
   todolistImg
 } from '../images/projects-screenshots';
 

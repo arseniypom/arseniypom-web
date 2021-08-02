@@ -94,3 +94,34 @@
     }
   }
 }
+
+@media (max-width: 1023px) {
+  .skills_info {
+    max-width: 32rem;
+  }
+  .skills_card {
+    max-width: 14rem;
+  }
+  .skills_card_list_item {
+    max-width: 5rem;
+    padding: .4rem;
+  }
+  .skills_img img {
+    max-width: 20rem;
+  }
+}
+@media (max-width: 768px) {
+  .skills_info {
+    max-width: 32rem;
+  }
+  .skills_card {
+    max-width: 14rem;
+  }
+  .skills_card_list_item {
+    max-width: 5rem;
+    padding: .4rem;
+  }
+  .skills_img {
+    display: none;
+  }
+}

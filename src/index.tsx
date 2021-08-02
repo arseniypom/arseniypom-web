@@ -1,16 +1,14 @@
-import React, {Suspense} from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
+
 import './styles/index.scss';
-// import App from './App';
+import 'mapbox-gl/dist/mapbox-gl.css';
 import reportWebVitals from './reportWebVitals';
-const App = React.lazy(() => import('./App'));
+import App from './App';
 
 ReactDOM.render(
   <React.StrictMode>
-    {/* <App /> */}
-    <Suspense fallback={<h1>Loading...</h1>}>
-      <App />
-    </Suspense>
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 );
