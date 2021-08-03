@@ -3,12 +3,53 @@
   height: 100vh;
   max-width: $main-menu_width;
   position: fixed;
+  z-index: 10;
   left: 0;
   top: 0;
   background-color: #181818;
   display: flex;
   flex-direction: column;
   align-items: center;
+  transition: left .3s ease;
+
+  &_burger {
+    width: 3rem;
+    height: 3rem;
+    background-color: $background_color;
+    border: 1px solid $accent-color;
+    border-radius: 50%;
+
+    position: absolute;
+    z-index: 10;
+    right: -4rem;
+    top: 1rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    span {
+      width: 1.5rem;
+      height: 2px;
+      background-color: $accent-color;
+      position: absolute;
+    }
+    span::after, span::before {
+      content: "";
+      width: 1.5rem;
+      height: 2px;
+      background-color: $accent-color;
+      position: absolute;
+      z-index: 3;
+      border-radius: 16px;
+    }
+    span::before {
+      bottom: .5rem;
+    }
+    span::after {
+      top: .5rem;
+    }
+  }
 
   &_top {
     width: 100%;
@@ -176,5 +217,11 @@
     .hexagon:hover::after {
       border-top-color: red;
     }
+  }
+}
+
+@media (max-width: 767px) {
+  .main-menu {
+    left: -$main-menu_width;
   }
 }

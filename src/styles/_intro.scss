@@ -126,6 +126,42 @@
   }
 }
 
+@media (max-width: 767px) {
+  .intro {
+
+    &_header {
+      font-size: 4rem;
+
+      &_first-line {
+        top: $intro-header_margin-top--sm;
+      }
+      &_second-line {
+        top: calc(#{$intro-header_margin-top--sm} + #{$intro-header_line-height--sm} + .2rem);
+      }
+      &_third-line {
+        top: calc(#{$intro-header_margin-top--sm} + #{$intro-header_line-height--sm * 2} - .5rem);
+      }
+
+      &_letter-main {
+        width: 4rem;
+        height: 4rem;
+      }
+    }
+
+    &_text {
+      top: calc(#{$intro-header_margin-top--sm} + #{$intro-header_line-height--sm * 3} + 1rem);
+    }
+    &_contact-button {
+      top: calc(#{$intro-header_margin-top--sm} + #{$intro-header_line-height--sm * 3} + 3rem);
+    }
+
+    &_board{
+      max-height: 89vh;
+      align-self: flex-end;
+    }
+  }
+}
+
 @-webkit-keyframes rubberBand {
   from {
     transform: scale3d(1, 1, 1);

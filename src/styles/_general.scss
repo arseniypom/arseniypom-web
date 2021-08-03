@@ -12,14 +12,14 @@ html {
 
 body {
   margin: 0;
-
   background-color: $background_color;
-  color: $main_text-color;
-  padding-left: $main-menu_width;
-  display: block;
-  min-width: 320px;
-  overflow-y: scroll;
-  overflow-x: hidden;
+
+  // color: $main_text-color;
+  // padding-left: $main-menu_width;
+  // display: block;
+  // min-width: 320px;
+  // overflow-y: scroll;
+  // overflow-x: hidden;
 }
 
 body::-webkit-scrollbar {
@@ -53,6 +53,22 @@ a, p, input, textarea {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.container {
+  background-color: $background_color;
+  color: $main_text-color;
+  padding-left: $main-menu_width;
+  display: block;
+  min-width: 320px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+@media (max-width: 767px) {
+  .container {
+    padding-left: 0;
+  }
 }
 
 .section {

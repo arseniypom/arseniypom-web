@@ -12,9 +12,21 @@ import {
 } from '../images/menu-icons';
 
 const Navbar: React.FC = () => {
+  const navbar: any = React.useRef(null)
+
+  const toggleNavbar = () => {
+    if (navbar.current.style.left === '0px') {
+      navbar.current.style.left = '-6rem'
+    } else {
+      navbar.current.style.left = '0px'
+    }    
+  }
   
   return (
-    <nav className="main-menu">
+    <nav ref={navbar} className="main-menu">
+      <div onClick={toggleNavbar} className="main-menu_burger">
+        <span></span>
+      </div>
       <div className="main-menu_top">
         <a className="logo" href="/">
           <div className="main-menu_top_img"></div>
