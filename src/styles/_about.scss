@@ -45,3 +45,25 @@
     justify-content: space-evenly;
   }
 }
+
+@media (max-width: 425px) {
+  .about-section {
+    padding: 0 1rem;
+  }
+
+  .about {
+    justify-content: flex-end;
+
+    &_text {
+      margin-bottom: 2rem;
+    }
+    
+    &_img {
+      max-width: 90%;
+
+      img {
+        height: 100%;
+      }
+    }
+  }
+}

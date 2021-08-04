@@ -140,3 +140,10 @@ select:-webkit-autofill:focus {
     margin-left: 0;
   }
 }
+
+@media (max-width: 425px) {
+  .contact_form {
+    padding-bottom: 2rem;
+    justify-content: flex-end;
+  }
+}

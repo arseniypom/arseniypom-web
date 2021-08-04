@@ -30,7 +30,8 @@
     width: 25%;
     height: 15rem;
     position: relative;
-    // padding-top: 100%;
+    // background-color: #181818;
+    background-color: bisque;
 
     &_img {
       width: 100%;
@@ -83,9 +84,25 @@
     }
   }
   .project-cards {
-
     &_item {
       width: 50%;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .portfolio {
+
+    &_heading {
+      margin: 0 auto;
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .project-cards {
+    &_item {
+      height: 11rem;
     }
   }
 }

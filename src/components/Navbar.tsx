@@ -14,19 +14,17 @@ import {
 const Navbar: React.FC = () => {
   const navbar: any = React.useRef(null)
 
+  const [isNavbarActive, setNavbarActive] = React.useState(false)
   const toggleNavbar = () => {
-    if (navbar.current.style.left === '0px') {
-      navbar.current.style.left = '-6rem'
-    } else {
-      navbar.current.style.left = '0px'
-    }    
+    setNavbarActive((prev) => !prev)
   }
   
   return (
-    <nav ref={navbar} className="main-menu">
+    <nav ref={navbar} className={isNavbarActive ? "main-menu main-menu--active" : "main-menu"}>
       <div onClick={toggleNavbar} className="main-menu_burger">
         <span></span>
       </div>
+      <div onClick={() => setNavbarActive(false)} className="main-menu_burger-background"></div>
       <div className="main-menu_top">
         <a className="logo" href="/">
           <div className="main-menu_top_img"></div>
@@ -60,6 +58,7 @@ const Navbar: React.FC = () => {
             <div className="hexagon github-link">
               <GithubIcon />
             </div>
+            <p>GitHub</p>
           </a>
         </div>
         <div className="main-menu_links_item">
@@ -67,6 +66,7 @@ const Navbar: React.FC = () => {
             <div className="hexagon facebook-link">
               <FacebookIcon />
             </div>
+            <p>Facebook</p>
           </a>
         </div>
         <div className="main-menu_links_item">
@@ -74,6 +74,7 @@ const Navbar: React.FC = () => {
             <div className="hexagon linkedin-link">
               <LinkedinIcon />
             </div>
+            <p>LinkedIn</p>
           </a>
         </div>
       </div>

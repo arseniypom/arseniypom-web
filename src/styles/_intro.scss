@@ -71,16 +71,16 @@
     top: calc(#{$intro-header_margin-top} + #{$intro-header_line-height * 3} + .5rem);
     left: 0;
   }
-
+  &_contact {
+    margin-left: 3rem;
+    position: absolute;
+    top: calc(#{$intro-header_margin-top} + #{$intro-header_line-height * 3} + 2.5rem);
+    left: 0;
+  }
   &_contact-button {
     width: max-content;
     background-color: #1d1d1d;
     padding: .7rem 1.4rem .5rem;
-    margin-left: 3rem;
-
-    position: absolute;
-    top: calc(#{$intro-header_margin-top} + #{$intro-header_line-height * 3} + 2.5rem);
-    left: 0;
   }
 
   &_board{
@@ -89,6 +89,7 @@
     flex-wrap: wrap;
     width: 100%;
     max-height: 100vh;
+    overflow: hidden;
   }
 
   &_scroll-down {
@@ -128,18 +129,18 @@
 
 @media (max-width: 767px) {
   .intro {
-
     &_header {
       font-size: 4rem;
+      margin: 0 0 0 8%;
 
       &_first-line {
-        top: $intro-header_margin-top--sm;
+        top: $intro-header_margin-top--md;
       }
       &_second-line {
-        top: calc(#{$intro-header_margin-top--sm} + #{$intro-header_line-height--sm} + .2rem);
+        top: calc(#{$intro-header_margin-top--md} + #{$intro-header_line-height--md} + .2rem);
       }
       &_third-line {
-        top: calc(#{$intro-header_margin-top--sm} + #{$intro-header_line-height--sm * 2} - .5rem);
+        top: calc(#{$intro-header_margin-top--md} + #{$intro-header_line-height--md * 2} - .5rem);
       }
 
       &_letter-main {
@@ -149,15 +150,39 @@
     }
 
     &_text {
-      top: calc(#{$intro-header_margin-top--sm} + #{$intro-header_line-height--sm * 3} + 1rem);
+      top: calc(#{$intro-header_margin-top--md} + #{$intro-header_line-height--md * 3} + 1rem);
+      margin-left: 8%;
     }
-    &_contact-button {
-      top: calc(#{$intro-header_margin-top--sm} + #{$intro-header_line-height--sm * 3} + 3rem);
+    &_contact {
+      margin-left: 8%;
+      top: calc(#{$intro-header_margin-top--md} + #{$intro-header_line-height--md * 3} + 3rem);
     }
 
     &_board{
       max-height: 89vh;
       align-self: flex-end;
+    }
+  }
+}
+@media (max-width: 425px) {
+  .intro {
+    &_header {
+      font-size: 3rem;
+
+      &_first-line {
+        top: $intro-header_margin-top--md;
+      }
+      &_second-line {
+        top: calc(#{$intro-header_margin-top--md} + #{$intro-header_line-height--sm} + .2rem);
+      }
+      &_third-line {
+        top: calc(#{$intro-header_margin-top--md} + #{$intro-header_line-height--sm * 2} - .5rem);
+      }
+
+      &_letter-main {
+        width: 3rem;
+        height: 3rem;
+      }
     }
   }
 }

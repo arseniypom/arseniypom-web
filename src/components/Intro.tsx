@@ -104,21 +104,12 @@ const Intro: React.FC = () => {
           }
         }, 600);
 
-        // setTimeout(() => {
-        //   clearInterval(intervalId);
-        // }, 5000);
       } catch (error) {
         console.log(error.message);
       }
     })();
 
   }, [introScreen]);
-
-  // const colorButtonClickHandle = (e: React.MouseEvent<Element, MouseEvent>) => {
-  //   const target = e.target as HTMLButtonElement;
-  //   setActiveColorPaletteName(target.name);
-  //   setActiveColorPalette(colorPalettes[target.name]);
-  // }
 
 
   return (
@@ -128,40 +119,12 @@ const Intro: React.FC = () => {
         <h1 ref={secondLine} className="intro_header intro_header_second-line"></h1>
         <h1 ref={thirdLine} className="intro_header intro_header_third-line"></h1>
         <p data-aos="fade-down" data-aos-duration="500" data-aos-delay="2900" className="text-muted intro_text">Front-End / Back-End Developer / Freelancer</p>
-        <a data-aos="fade-down" data-aos-duration="800" data-aos-delay="3000" href="#contact"><button className="animated-button intro_contact-button">Reach me</button></a>
+        <div className="intro_contact" data-aos="fade-down" data-aos-duration="800" data-aos-delay="3000">
+          <a href="#contact"><button className="animated-button intro_contact-button">Reach me</button></a>
+        </div>
         <div ref={squaresBoard} onMouseOver={(e) => squareMouseOverHandle(e)} className="intro_board" id="board">
           {squaresArray}
         </div>
-        {/* <div className="intro_option" onClick={colorButtonClickHandle}>
-          <button className={classNames(
-            "intro_option_button",
-            "default-palette-button",
-            {"color-palette-button-active": activeColorPaletteName === 'default'}
-          )} name="default">Default</button>
-          <button className={classNames(
-            "intro_option_button",
-            "pinky-palette-button",
-            {"color-palette-button-active": activeColorPaletteName === 'pinky'}
-          )} name="pinky">Pinky</button>
-          <button className={classNames(
-            "intro_option_button",
-            "blue-palette-button",
-            {"color-palette-button-active": activeColorPaletteName === 'blue'}
-          )} name="blue">Blue</button>
-          <button className={classNames(
-            "intro_option_button",
-            "rainbow-palette-button",
-            {"color-palette-button-active": activeColorPaletteName === 'rainbow'}
-          )} name="rainbow">
-            <span className="letter-1">R</span>
-            <span className="letter-2">a</span>
-            <span className="letter-3">i</span>
-            <span className="letter-4">n</span>
-            <span className="letter-5">b</span>
-            <span className="letter-6">o</span>
-            <span className="letter-7">w</span>
-          </button>
-        </div> */}
         <a href="#about" className="intro_scroll-down">
           <img src={scrollDownImg} className="" alt="scroll down" />
           <span></span>
