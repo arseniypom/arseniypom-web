@@ -3,18 +3,18 @@ import ProjectCard from "./ProjectCard";
 import Heading from './Heading';
 
 import {
-  chatImg,
+  linkerImg,
   coffeeGuysImg,
   hangmanImg,
-  todolistImg
+  waterDeliveryImg
 } from '../images/projects-screenshots';
 
 const myWorks = [
   {
     id: 1,
-    image: coffeeGuysImg,
-    title: 'Coffee Guys',
-    description: 'Online coffee shop',
+    image: linkerImg,
+    title: 'Chat',
+    description: 'Online websocket chat',
     url:'https://coffee-guys.herokuapp.com/'
   },
   {
@@ -26,29 +26,28 @@ const myWorks = [
   },
   {
     id: 3,
-    image: chatImg,
-    title: 'Chat',
-    description: 'Online websocket chat',
+    image: coffeeGuysImg,
+    title: 'Coffee Guys',
+    description: 'Online coffee shop',
     url:'https://coffee-guys.herokuapp.com/'
   },
   {
     id: 4,
-    image: todolistImg,
-    title: 'To Do',
-    description: 'A to-do list with basic functionality',
-    url:'https://still-cliffs-08651.herokuapp.com/'
+    image: waterDeliveryImg,
+    title: 'Water Delivery',
+    description: 'Water delivery service',
+    url:'https://water-delivery-e41fb.web.app/'
   }
 ]
 
 const Portfolio = () => {
-
 
   return (
     <section className="portfolio-section" id="portfolio">
       <div className="portfolio">
         <div className="portfolio_heading">
           <Heading text="My Portfolio" />
-          <p>Here is small gallery of my recent projects. Some of them were done entirely by me, others all together with passionate developers like me. Interested to know more about my work? <a className="accent-link" href="#contact">Contact me!</a></p>
+          <p>Here is a small gallery of my recent projects. Some of them were done entirely by me, others all together with developers who love coding as much as I do. Interested to know more about my work? <a className="accent-link" href="#contact">Contact me!</a></p>
         </div>
         <div className="project-cards">
           {

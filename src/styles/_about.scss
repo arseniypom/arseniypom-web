@@ -57,13 +57,31 @@
     &_text {
       margin-bottom: 2rem;
     }
-    
+
     &_img {
       max-width: 90%;
 
       img {
         height: 100%;
       }
+    }
+  }
+}
+
+@media (max-width: 374px) {
+  .about {
+    justify-content: flex-end;
+
+    &_text {
+      margin-bottom: 1rem;
+
+      p {
+        margin-bottom: .5rem;
+      }
+    }
+    
+    &_img {
+      max-width: 60%;
     }
   }
 }

@@ -61,13 +61,21 @@ code {
   padding-left: $main-menu_width;
   display: block;
   min-width: 320px;
-  overflow-y: scroll;
-  overflow-x: hidden;
+  // overflow-y: scroll;
+  // overflow-x: hidden;
 }
-
 @media (max-width: 767px) {
   .container {
     padding-left: 0;
+  }
+}
+
+.small-screen {
+  display: none;
+}
+@media (max-width: 374px) {
+  .small-screen {
+    display: initial;
   }
 }
 
@@ -83,11 +91,21 @@ code {
   color: $accent-color;
   letter-spacing: 2px;
 }
-
 @media (max-width: 767px) {
   .section_heading {
     font-size: 3rem;
     margin-bottom: 1rem;
+  }
+}
+@media (max-width: 425px) {
+  .section_heading {
+    font-size: 2.5rem;
+    margin-bottom: .7rem;
+  }
+}
+@media (max-width: 374px) {
+  .section_heading {
+    text-align: right;
   }
 }
 

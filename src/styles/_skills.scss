@@ -127,7 +127,7 @@
     }
 
     &_heading {
-      margin-bottom: 2rem;
+      margin-bottom: 1rem;
     }
   }
   .skills_card {
@@ -167,10 +167,44 @@
       padding: .5rem .4rem;
   
       img {
-        width: 1.2rem;
-        height: 1.2rem;
+        width: 100%;
+        max-width: 1.2rem;
+        max-height: 1.2rem;
         margin-bottom: .5rem;
       }
+    }
+  }
+}
+
+@media (max-width: 374px) {
+  .skills-section {
+    padding: 1rem .5rem;
+  }
+  // .skills {
+  //   &_heading {
+  //     header {
+  //       text-align: right;
+  //     }
+  //   }
+  // }
+  .skills_card {
+    padding: 0;
+    max-width: none;
+    background-color: transparent;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &_list {
+      border-bottom: 1px solid #3d3d3d;
+      padding: 0 0 .4rem;
+    }
+
+    &_list_item {
+      border: none;
+      padding: 0;
+      margin: 0;
     }
   }
 }

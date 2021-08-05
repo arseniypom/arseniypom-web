@@ -40,6 +40,7 @@ function Contact() {
           <textarea className="contact_form_input contact_form_input-message" name="message" placeholder="Message *" required/>
           <div className="contact_form_send-block">
             <p className="text-muted">Or email me directly at <a className="accent-link" href="mailto:arseniy.pomazkov@gmail.com">arseniy.pomazkov@gmail.com</a></p>
+            <a className="accent-link small-screen" href="mailto:arseniy.pomazkov@gmail.com">arseniy.pomazkov@gmail.com</a>
             <button className="animated-button" type="submit" value="Send">Send</button>
           </div>
         </form>

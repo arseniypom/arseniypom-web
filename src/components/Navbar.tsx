@@ -54,7 +54,7 @@ const Navbar: React.FC = () => {
       </div>
       <div className="main-menu_links">
         <div className="main-menu_links_item">
-          <a href="https://github.com/arseniypom" target="_blank">
+          <a href="https://github.com/arseniypom" target="_blank" rel="noreferrer">
             <div className="hexagon github-link">
               <GithubIcon />
             </div>
@@ -62,7 +62,7 @@ const Navbar: React.FC = () => {
           </a>
         </div>
         <div className="main-menu_links_item">
-          <a href="https://www.facebook.com/profile.php?id=100014215268900" target="_blank">
+          <a href="https://www.facebook.com/profile.php?id=100014215268900" target="_blank" rel="noreferrer">
             <div className="hexagon facebook-link">
               <FacebookIcon />
             </div>
@@ -70,7 +70,7 @@ const Navbar: React.FC = () => {
           </a>
         </div>
         <div className="main-menu_links_item">
-          <a href="https://www.linkedin.com/in/arseniy-pomazkov-79a0901a2/" target="_blank">
+          <a href="https://www.linkedin.com/in/arseniy-pomazkov-79a0901a2/" target="_blank" rel="noreferrer">
             <div className="hexagon linkedin-link">
               <LinkedinIcon />
             </div>

@@ -158,9 +158,9 @@
       margin-bottom: .5rem;
 
       p {
-        color: rgba($accent-color, .8);
-        margin-left: .3rem;
-        font-size: .85rem;
+        // color: rgba($accent-color, .8);
+        // margin-left: .3rem;
+        // font-size: .85rem;
         display: none;
       }
     }
@@ -229,16 +229,6 @@
         border-top-color: $accent-color;
       }
     }
-
-    .hexagon:hover {
-      background-color: red;
-    }
-    .hexagon:hover::before {
-      border-bottom-color: red;
-    }
-    .hexagon:hover::after {
-      border-top-color: red;
-    }
   }
 }
 
@@ -278,7 +268,8 @@
     }
 
     &_links {
-      align-items: flex-start;
+      // align-items: flex-start;
+      flex-direction: row;
       &_item {
         margin: .35rem 0 .35rem 1rem;
 
@@ -287,11 +278,43 @@
           justify-content: flex-start;
           align-items: baseline;
         }
-  
-        p {
-          display: inline-block;
+      }
+
+      .hexagon.github-link {
+        background-color: $violet-color;
+        &:before {
+          border-bottom-color: $violet-color;
+        }
+        &:after {
+          border-top-color: $violet-color;
         }
       }
+      .hexagon.linkedin-link {
+        background-color: #5390D9;
+        &:before {
+          border-bottom-color: #5390D9;
+        }
+        &:after {
+          border-top-color: #5390D9;
+        }
+      }
+      .hexagon.facebook-link {
+        background-color: $accent-color;
+        &:before {
+          border-bottom-color: $accent-color;
+        }
+        &:after {
+          border-top-color: $accent-color;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 374px) {
+  .main-menu {
+
+    &_top {
+      padding: 1rem 2rem;
     }
   }
 }

@@ -1,11 +1,11 @@
-import chatImg from './chat.png';
+import linkerImg from './linker.png';
 import coffeeGuysImg from './coffeeguys.png';
-import hangmanImg from './hangman.png';
-import todolistImg from './todolist.png';
+import hangmanImg from './hangman-1.png';
+import waterDeliveryImg from './waterdelivery.png';
 
 export {
-  chatImg,
+  linkerImg,
   coffeeGuysImg,
   hangmanImg,
-  todolistImg
+  waterDeliveryImg
 };

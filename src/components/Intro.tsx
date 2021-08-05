@@ -32,21 +32,23 @@ const Intro: React.FC = () => {
     }
   }
 
-  const setColor = (target: HTMLElement, timer: number = 0) : void => {
+  const setColor = React.useCallback(
+    (target: HTMLElement, timer: number = 0) : void => {
+      const getRandomColor = () => {
+        const colorIndex: number = Math.round(Math.random() * activeColorPalette.length);
+        return activeColorPalette[colorIndex];
+      }
 
-    setTimeout(() => {
-      target.style.backgroundColor = '#' + getRandomColor();
-    }, timer);
-
-    setTimeout(() => {
-      target.style.backgroundColor = '#1d1d1d';
-    }, timer + 700);
-  }
+      setTimeout(() => {
+        target.style.backgroundColor = '#' + getRandomColor();
+      }, timer);
   
-  const getRandomColor = () => {
-    const colorIndex: number = Math.round(Math.random() * activeColorPalette.length);
-    return activeColorPalette[colorIndex];
-  }
+      setTimeout(() => {
+        target.style.backgroundColor = '#1d1d1d';
+      }, timer + 700);
+    },
+    [activeColorPalette]
+  )
 
   const getRandomElement = (elementsArray: NodeListOf<Element>) => {
     return elementsArray[Math.round(Math.random() * (elementsArray.length-1))] as any;
@@ -109,7 +111,7 @@ const Intro: React.FC = () => {
       }
     })();
 
-  }, [introScreen]);
+  }, [introScreen, setColor]);
 
 
   return (

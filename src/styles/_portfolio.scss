@@ -31,7 +31,7 @@
     height: 15rem;
     position: relative;
     // background-color: #181818;
-    background-color: bisque;
+    background-color: black;
 
     &_img {
       width: 100%;
@@ -52,6 +52,12 @@
       transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
       text-align: center;
+
+      h1 {
+        font-size: 2rem;
+        letter-spacing: 2px;
+        line-height: 100%;
+      }
     }
 
     &:hover &_img {
@@ -92,17 +98,35 @@
 
 @media (max-width: 767px) {
   .portfolio {
-
     &_heading {
       margin: 0 auto;
     }
   }
 }
-
 @media (max-width: 425px) {
+  .portfolio {
+    justify-content: flex-end;
+    
+    &_heading {
+      height: auto;
+      margin-bottom: 2rem;
+    }
+  }
   .project-cards {
     &_item {
       height: 11rem;
+    }
+  }
+}
+@media (max-width: 374px) {
+  .portfolio {
+    &_heading {
+      margin-bottom: 1rem;
+    }
+  }
+  .project-cards {
+    &_item {
+      height: 9rem;
     }
   }
 }

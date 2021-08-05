@@ -140,10 +140,29 @@ select:-webkit-autofill:focus {
     margin-left: 0;
   }
 }
-
 @media (max-width: 425px) {
   .contact_form {
-    padding-bottom: 2rem;
+    padding-bottom: 1rem;
     justify-content: flex-end;
+  }
+}
+@media (max-width: 374px) {
+  .contact_form {
+    .section_heading {
+      text-align: center;
+    }
+    p {
+      display: none;
+    }
+  }
+}
+@media (max-height: 666px) {
+  .contact_form {
+    height: 100%;
+    padding-bottom: 0;
+    justify-content: center;
+  }
+  .contact_map {
+    display: none;
   }
 }
