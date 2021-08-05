@@ -1,6 +1,11 @@
-.intro {
+.intro-section {
   height: 100vh;
-  position: relative;
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+}
+.intro {
+  height: 100%;
+  position: static;
   box-sizing: border-box;
   display: flex;
   justify-content: center;
@@ -10,7 +15,7 @@
     font-weight: normal;
     line-height: $intro-header_line-height;
     position: absolute;
-    left: 0;
+    left: $main-menu_width;
     margin: 0 0 0 3rem;
 
     &_first-line {
@@ -69,13 +74,13 @@
     background-color: #1d1d1d;
     position: absolute;
     top: calc(#{$intro-header_margin-top} + #{$intro-header_line-height * 3} + .5rem);
-    left: 0;
+    left: $main-menu_width;
   }
   &_contact {
     margin-left: 3rem;
     position: absolute;
     top: calc(#{$intro-header_margin-top} + #{$intro-header_line-height * 3} + 2.5rem);
-    left: 0;
+    left: $main-menu_width;
   }
   &_contact-button {
     width: max-content;
@@ -132,6 +137,7 @@
     &_header {
       font-size: 4rem;
       margin: 0 0 0 8%;
+      left: 0;
 
       &_first-line {
         top: $intro-header_margin-top--md;
@@ -152,10 +158,12 @@
     &_text {
       top: calc(#{$intro-header_margin-top--md} + #{$intro-header_line-height--md * 3} + 1rem);
       margin-left: 8%;
+      left: 0;
     }
     &_contact {
       margin-left: 8%;
       top: calc(#{$intro-header_margin-top--md} + #{$intro-header_line-height--md * 3} + 3rem);
+      left: 0;
     }
 
     &_board{

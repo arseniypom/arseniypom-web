@@ -1,7 +1,7 @@
 import React from 'react';
 import Heading from './Heading';
 
-import skillsImg from '../images/code4.svg';
+import skillsImg from '../images/code4.png';
 import {
   htmlImg,
   cssImg,

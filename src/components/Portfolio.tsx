@@ -13,9 +13,9 @@ const myWorks = [
   {
     id: 1,
     image: linkerImg,
-    title: 'Chat',
-    description: 'Online websocket chat',
-    url:'https://coffee-guys.herokuapp.com/'
+    title: 'LINKER',
+    description: "Service to track links' statistics",
+    url:'http://linker-stats.ru/'
   },
   {
     id: 2,

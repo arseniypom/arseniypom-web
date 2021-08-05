@@ -3,7 +3,9 @@
 }
 
 .contact {
-  height: 100%;
+  height: 100vh;
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -154,6 +156,9 @@ select:-webkit-autofill:focus {
   }
 }
 @media (max-height: 666px) {
+  .contact {
+    justify-content: center;
+  }
   .contact_form {
     height: 100%;
     padding-bottom: 0;
