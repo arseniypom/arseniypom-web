@@ -115,7 +115,7 @@ const Intro: React.FC = () => {
 
 
   return (
-    <section id="home" className="intro-section">
+    <section id="home" className="section intro-section">
       <div ref={introScreen} className="intro">
         <h1 ref={firstLine} className="intro_header intro_header_first-line"></h1>
         <h1 ref={secondLine} className="intro_header intro_header_second-line"></h1>

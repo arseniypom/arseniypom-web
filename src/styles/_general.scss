@@ -8,11 +8,15 @@
 
 html {
   scroll-behavior: smooth;
+  height: -webkit-fill-available;
 }
 
 body {
   margin: 0;
   background-color: $background_color;
+  min-height: 100vh;
+  /* mobile viewport bug fix */
+  min-height: -webkit-fill-available;
 
   // color: $main_text-color;
   // padding-left: $main-menu_width;
@@ -80,8 +84,10 @@ code {
 }
 
 .section {
-  height: 100vh;
   width: 100%;
+  height: 100vh;
+  /* mobile viewport bug fix */
+  min-height: -webkit-fill-available;
 }
 
 .section_heading {

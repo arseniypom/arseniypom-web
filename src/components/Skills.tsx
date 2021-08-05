@@ -22,7 +22,7 @@ import {
 
 function Skills() {
   return (
-    <section className="skills-section" id="skills" >
+    <section className="section skills-section" id="skills" >
       <div className="skills">
         <div className="skills_info">
           <div className="skills_heading">

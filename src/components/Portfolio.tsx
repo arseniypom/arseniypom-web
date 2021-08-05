@@ -43,7 +43,7 @@ const myWorks = [
 const Portfolio = () => {
 
   return (
-    <section className="portfolio-section" id="portfolio">
+    <section className="section portfolio-section" id="portfolio">
       <div className="portfolio">
         <div className="portfolio_heading">
           <Heading text="My Portfolio" />

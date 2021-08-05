@@ -26,7 +26,7 @@ const Heading: React.FC<IHeadingfProps> = ({text}) => {
 
       heading.current.append(letter)
     });
-  }, [characters]);
+  }, []);
 
 
   return (
