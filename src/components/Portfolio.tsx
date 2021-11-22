@@ -19,24 +19,24 @@ const myWorks = [
   },
   {
     id: 2,
-    image: hangmanImg,
-    title: 'Hangman',
-    description: 'The hangman game',
-    url:'https://powerful-cove-31149.herokuapp.com/'
-  },
-  {
-    id: 3,
     image: coffeeGuysImg,
     title: 'Coffee Guys',
     description: 'Online coffee shop',
     url:'https://coffee-guys.herokuapp.com/'
   },
   {
-    id: 4,
+    id: 3,
     image: waterDeliveryImg,
     title: 'Water Delivery',
-    description: 'Water delivery service',
-    url:'https://water-delivery-e41fb.web.app/'
+    description: 'Water delivery shop & service',
+    url:'http://water-deli.ru:81/'
+  },
+  {
+    id: 4,
+    image: hangmanImg,
+    title: 'Hangman',
+    description: 'The hangman game',
+    url:'https://powerful-cove-31149.herokuapp.com/'
   }
 ]
 

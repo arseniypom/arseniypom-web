@@ -186,6 +186,11 @@
         height: 11px;
       }
     }
+
+    .hexagon.instagram-link svg {
+        width: 13px;
+        height: 13px;
+    }
     
     .hexagon:before,
     .hexagon:after {
@@ -224,7 +229,7 @@
         border-top-color: #5390D9;
       }
     }
-    .hexagon.facebook-link:hover {
+    .hexagon.instagram-link:hover {
       background-color: $accent-color;
       &:before {
         border-bottom-color: $accent-color;
@@ -302,7 +307,7 @@
           border-top-color: #5390D9;
         }
       }
-      .hexagon.facebook-link {
+      .hexagon.instagram-link {
         background-color: $accent-color;
         &:before {
           border-bottom-color: $accent-color;

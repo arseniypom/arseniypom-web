@@ -6,6 +6,7 @@ import {ReactComponent as LetterIcon } from './letter.svg';
 import {ReactComponent as GithubIcon } from './github.svg';
 import {ReactComponent as LinkedinIcon } from './linkedin.svg';
 import {ReactComponent as FacebookIcon } from './facebook.svg';
+import {ReactComponent as InstagramIcon } from './instagram.svg';
 
 export {
   HomeIcon,
@@ -15,5 +16,6 @@ export {
   LetterIcon,
   GithubIcon,
   LinkedinIcon,
-  FacebookIcon
+  FacebookIcon,
+  InstagramIcon,
 };

@@ -8,7 +8,8 @@ import {
   LetterIcon,
   GithubIcon,
   LinkedinIcon,
-  FacebookIcon
+  FacebookIcon,
+  InstagramIcon
 } from '../images/menu-icons';
 
 const Navbar: React.FC = () => {
@@ -62,9 +63,9 @@ const Navbar: React.FC = () => {
           </a>
         </div>
         <div className="main-menu_links_item">
-          <a href="https://www.facebook.com/profile.php?id=100014215268900" target="_blank" rel="noreferrer">
-            <div className="hexagon facebook-link">
-              <FacebookIcon />
+          <a href="https://www.instagram.com/pomazkov.js/" target="_blank" rel="noreferrer">
+            <div className="hexagon instagram-link">
+              <InstagramIcon />
             </div>
             <p>Facebook</p>
           </a>
