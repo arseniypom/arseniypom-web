@@ -8,8 +8,8 @@ function About() {
       <div className="about">
         <div className="about_text">
           <Heading text="About Me" />
-          <p>Hello! My name is Arseniy Pomazkov and I am a web developer based in Moscow, Russia. I specialize in building front-end (and occasionally back-end) for different on-line services and applications.</p>
-          <p>Currently working as an engineer at <a className="accent-link" href="https://www.vtb.com/o-banke/" target="_blank" rel="noreferrer">VTB</a> – a global provider of financial service – I am focused on building helpful, good-looking and customer-centred products.</p>
+          <p>Hello! My name is Arseniy Pomazkov and I am a web developer currently based in Antalya, Turkey. I specialize in building front-end (and occasionally back-end) for different services and applications.</p>
+          <p>Currently working as a frontend engineer at <a className="accent-link" href="https://amai.io/" target="_blank" rel="noreferrer">AMAI</a> – an innovative provider of ultra realistic text-to-speech voice engines – I am focused on building <span style={{color:"#4EA8DE"}}>helpful</span>, <span style={{color:"#5E60CE"}}>good-looking</span> and <span style={{color:"#6930C3"}}>customer-centred</span> SaaS products.</p>
         </div>
         <div className="about_img">
           <img src={myImg} alt="me" />
