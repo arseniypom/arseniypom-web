@@ -17,7 +17,8 @@ import {
   agileImg,
   nodejsImg,
   expressImg,
-  mongodbImg
+  mongodbImg,
+  nestjsImg,
 } from '../images/skills-icons';
 
 function Skills() {
@@ -109,8 +110,8 @@ function Skills() {
                   <p className="skills_card_list_item_name">Mongo DB</p>
                 </li>
                 <li className="skills_card_list_item">
-                  <img src={jsImg} alt="" />
-                  <p className="skills_card_list_item_name">JavaScript</p>
+                  <img src={nestjsImg} alt="nest js" />
+                  <p className="skills_card_list_item_name">NestJS</p>
                 </li>
               </ul>
             </div>

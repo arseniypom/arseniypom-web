@@ -17,6 +17,7 @@ import agileImg from './jquery.svg';
 import nodejsImg from './nodejs.svg';
 import expressImg from './express.png';
 import mongodbImg from './mongodb.png';
+import nestjsImg from './nestjs.png'
 
 export {
   htmlImg,
@@ -33,5 +34,6 @@ export {
   agileImg,
   nodejsImg,
   expressImg,
-  mongodbImg
+  mongodbImg,
+  nestjsImg,
 };

@@ -1,5 +1,5 @@
 import React from 'react';
-import resumePdf from '../docs/APomazkov-resume_eng.pdf';
+import resumePdf from '../docs/ArseniyPomazkov_Resume.pdf';
 
 function ResumeLink() {
   return (
