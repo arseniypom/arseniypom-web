@@ -81,7 +81,7 @@
     &_img {
       width: 5rem;
       height: 5rem;
-      background-image: url('../images/logo.jpeg');
+      background-image: url('../images/logo.jpg');
       background-size: cover;
       background-position-x: right;
       border-radius: 50%;
@@ -162,9 +162,6 @@
       margin-bottom: .5rem;
 
       p {
-        // color: rgba($accent-color, .8);
-        // margin-left: .3rem;
-        // font-size: .85rem;
         display: none;
       }
     }

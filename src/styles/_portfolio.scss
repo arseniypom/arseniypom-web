@@ -29,7 +29,6 @@
     width: 25%;
     height: 15rem;
     position: relative;
-    // background-color: #181818;
     background-color: black;
 
     &_img {
@@ -40,6 +39,16 @@
       display: block;
       transition: .5s ease;
       backface-visibility: hidden;
+    }
+    &_img.hb {
+      background-color: #2f54eb;
+      object-fit: contain;
+      padding: 0 2rem;
+    }
+    &_img.indiepub {
+      background-color: #171717;
+      object-fit: contain;
+      padding: 0 2rem;
     }
 
     &_description {

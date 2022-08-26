@@ -3,33 +3,35 @@ import ProjectCard from "./ProjectCard";
 import Heading from './Heading';
 
 import {
-  linkerImg,
+  homebuddy,
   coffeeGuysImg,
   hangmanImg,
-  waterDeliveryImg
+  indiepub
 } from '../images/projects-screenshots';
 
 const myWorks = [
   {
     id: 1,
-    image: linkerImg,
-    title: 'LINKER',
-    description: "Service to track links' statistics",
-    url:'http://linker-stats.ru/'
+    image: homebuddy,
+    title: 'Homebuddy',
+    description: "Home Improvement Helper",
+    url:'https://www.homebuddy.com/',
+    className: 'hb',
   },
   {
     id: 2,
     image: coffeeGuysImg,
-    title: 'Coffee Guys',
+    title: 'CoffeeGuys',
     description: 'Online coffee shop',
-    url:'https://coffee-guys.herokuapp.com/'
+    url:'https://coffee-guys.herokuapp.com/',
   },
   {
     id: 3,
-    image: waterDeliveryImg,
-    title: 'Water Delivery',
-    description: 'Water delivery shop & service',
-    url:'http://water-deli.ru:81/'
+    image: indiepub,
+    title: 'Indiepub',
+    description: 'Innovative text-to-audiobook converter',
+    url:'https://indiepub.ai/',
+    className: 'indiepub',
   },
   {
     id: 4,
@@ -52,7 +54,7 @@ const Portfolio = () => {
         <div className="project-cards">
           {
             myWorks.map((proj) => {
-              return <ProjectCard projectImg={proj.image} title={proj.title} description={proj.description} url={proj.url} key={proj.id}/>
+              return <ProjectCard projectImg={proj.image} title={proj.title} description={proj.description} url={proj.url} className={proj.className || ""}/>
             })
           }
         </div>

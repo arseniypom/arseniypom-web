@@ -71,7 +71,7 @@ const Navbar: React.FC = () => {
           </a>
         </div>
         <div className="main-menu_links_item">
-          <a href="https://www.linkedin.com/in/arseniy-pomazkov-79a0901a2/" target="_blank" rel="noreferrer">
+          <a href="https://www.linkedin.com/in/arseniy-pomazkov/" target="_blank" rel="noreferrer">
             <div className="hexagon linkedin-link">
               <LinkedinIcon />
             </div>
