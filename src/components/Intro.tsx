@@ -107,7 +107,9 @@ const Intro: React.FC = () => {
         }, 600);
 
       } catch (error) {
-        console.log(error.message);
+        if (typeof error === 'object' && error !== null) {
+          console.log(error.toString());
+        }
       }
     })();
 
@@ -120,7 +122,7 @@ const Intro: React.FC = () => {
         <h1 ref={firstLine} className="intro_header intro_header_first-line"></h1>
         <h1 ref={secondLine} className="intro_header intro_header_second-line"></h1>
         <h1 ref={thirdLine} className="intro_header intro_header_third-line"></h1>
-        <p data-aos="fade-down" data-aos-duration="500" data-aos-delay="2900" className="text-muted intro_text">Front-End / Back-End Developer / Freelancer</p>
+        <p data-aos="fade-down" data-aos-duration="500" data-aos-delay="2900" className="text-muted intro_text">Senior Front-End Developer / Ex-Freelancer</p>
         <div className="intro_contact" data-aos="fade-down" data-aos-duration="800" data-aos-delay="3000">
           <a href="#contact"><button className="animated-button intro_contact-button">Reach me</button></a>
         </div>

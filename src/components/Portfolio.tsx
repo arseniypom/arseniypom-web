@@ -4,8 +4,6 @@ import Heading from './Heading';
 
 import {
   homebuddy,
-  coffeeGuysImg,
-  hangmanImg,
   indiepub
 } from '../images/projects-screenshots';
 
@@ -19,13 +17,6 @@ const myWorks = [
     className: 'hb',
   },
   {
-    id: 2,
-    image: coffeeGuysImg,
-    title: 'CoffeeGuys',
-    description: 'Online coffee shop',
-    url:'https://coffee-guys.herokuapp.com/',
-  },
-  {
     id: 3,
     image: indiepub,
     title: 'Indiepub',
@@ -33,13 +24,6 @@ const myWorks = [
     url:'https://indiepub.ai/',
     className: 'indiepub',
   },
-  {
-    id: 4,
-    image: hangmanImg,
-    title: 'Hangman',
-    description: 'The hangman game',
-    url:'https://powerful-cove-31149.herokuapp.com/'
-  }
 ]
 
 const Portfolio = () => {
@@ -49,12 +33,13 @@ const Portfolio = () => {
       <div className="portfolio">
         <div className="portfolio_heading">
           <Heading text="My Portfolio" />
-          <p>Here is a small gallery of my recent projects. Some of them were done entirely by me, others all together with developers who love coding as much as I do. Interested to know more about my work? <a className="accent-link" href="#contact">Contact me!</a></p>
+          <p>Here is a small gallery of my recent projects.</p>
+          <p>Interested to know more about my work? <a className="accent-link" href="#contact">Contact me!</a></p>
         </div>
         <div className="project-cards">
           {
             myWorks.map((proj) => {
-              return <ProjectCard projectImg={proj.image} title={proj.title} description={proj.description} url={proj.url} className={proj.className || ""}/>
+              return <ProjectCard key={proj.title} projectImg={proj.image} title={proj.title} description={proj.description} url={proj.url} className={proj.className || ""}/>
             })
           }
         </div>
