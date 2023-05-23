@@ -4,7 +4,8 @@ import Heading from './Heading';
 
 import {
   homebuddy,
-  indiepub
+  indiepub,
+  vtbApi
 } from '../images/projects-screenshots';
 
 const myWorks = [
@@ -15,6 +16,14 @@ const myWorks = [
     description: "Home Improvement Helper",
     url:'https://www.homebuddy.com/',
     className: 'hb',
+  },
+  {
+    id: 2,
+    image: vtbApi,
+    title: 'VTB API',
+    description: "FinTech: API Portal for bank services",
+    url:'https://developers.vtb.ru/',
+    className: 'vtb',
   },
   {
     id: 3,
