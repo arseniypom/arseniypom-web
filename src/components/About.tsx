@@ -8,7 +8,7 @@ function About() {
       <div className="about">
         <div className="about_text">
           <Heading text="About Me" />
-          <p>Hello! My name is Arseniy Pomazkov and I am a Senior Frontend Developer currently based in Belgrade, Serbia.</p>
+          <p>Hello! My name is Arseniy Pomazkov and I am a Senior Frontend Developer currently based in London, UK 🇬🇧</p>
           <p>I specialize in building good-looking and reliable front-end (and occasionally back-end) for different services and applications.</p>
         </div>
         <div className="about_img">

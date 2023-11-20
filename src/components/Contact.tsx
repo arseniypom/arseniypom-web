@@ -8,8 +8,8 @@ import Heading from './Heading';
 function Contact() {
 
   const [viewport, setViewport] = React.useState({
-    latitude: 44.78,
-    longitude: 20.45,
+    latitude: 51.50,
+    longitude: -0.11,
     width: '100%',
     height: '100%',
     zoom: 3.5
@@ -54,8 +54,8 @@ function Contact() {
             }}
           >
             <Marker
-              latitude={44.787197}
-              longitude={20.457273}>
+              latitude={51.509865}
+              longitude={-0.118092}>
                 <img className="contact_map_img" src={markerImg} alt="marker" />
             </Marker>
           </ReactMapGL>
